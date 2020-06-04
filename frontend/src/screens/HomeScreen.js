@@ -65,10 +65,26 @@ function HomeScreen(props) {
         )
           : (
             <ul className="products">
-              {products.map((product) => (
-                <Product key={product._id} {...product} />
-              ))}
-            </ul>
+          {
+            products.map(product =>
+              <li key={product._id}>
+                <div className="product">
+                  <Link to={'/product/' + product._id}>
+                    <img className="product-image" src={product.image} alt="product" />
+
+                  </Link>
+                  <div className="product-name">{product.name}
+                  </div>
+                  <div className="product-brand">{product.brand}</div>
+                  <div className="product-price">KSh {product.price}</div>
+                  
+                  <div className="product-buy">
+                    <Link to={'/product/' + product._id}>BUY NOW <i className="fas fa-cart-arrow-down fa-2x"></i></Link>
+                  </div>
+                </div>
+              </li>)
+          }
+        </ul>
           )}
     </div>
   );
