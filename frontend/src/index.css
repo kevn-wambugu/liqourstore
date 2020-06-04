@@ -14,6 +14,17 @@ body{
   height: 100vh;
   margin: 0;
 }
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+}
 
 button{
   font-size: 1.5rem;
@@ -175,10 +186,8 @@ a:hover{
   font-size: 2rem;
   font-weight: 300;
 }
-.product-image{
-  max-width: 34rem;
-  max-height: 34rem;
-}
+.product-image
+  { max-width: 80%; height: auto; }
 .product-rating{
   margin-bottom: 1.2rem;
 }
@@ -195,12 +204,12 @@ a:hover{
   flex-wrap: wrap;
   padding: .2rem;
 }
-.details-image {
-  flex: 1 1 60rem;
-}
+.details-image 
+  { max-width: 60%; height: auto; }
+
 .details-image img{
   max-width: 50rem;
-  width: 100%;
+  width: 80%;
 }
 .details-info {
   font-family: 'Quicksand', sans-serif;
