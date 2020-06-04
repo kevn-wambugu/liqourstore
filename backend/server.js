@@ -11,7 +11,7 @@ import config from './config';
 
 dotenv.config();
 
-const mongodbUrl = config.MONGODB_URL;
+const mongodbUrl = config.MONGODB_URL || "mongodb://localhost/alchemist_liqours";
 const port = config.PORT;
 mongoose
   .connect(mongodbUrl, {
