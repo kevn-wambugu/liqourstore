@@ -25,33 +25,6 @@ body{
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
-
-button{
-  font-size: 1.5rem;
-}
-
-.review {
-  list-style-type: none;
-  padding: 0;
-}
-.rating-container {
-  display: flex;
-  align-items: center;
-}
-.rating {
-  margin: .5rem 0;
-}
-.rating>span {
-  display: inline-block;
-  position: relative;
-  font-size: 2.5rem;
-  color: silver;
-  line-height: 2rem;
-}
-.rating-container>div:last-child {
-  margin-top: .5rem;
-  margin-left: .5rem;
-}
 .full-width {
   width: 100%;
 }
