@@ -1,0 +1,85 @@
+[
+  
+  {
+    
+    "name": "BeefEater London Pink",
+    "category": "Whiskey",
+    "image": "/images/beefeater.jpg",
+    "price": 740,
+    "brand": "Ballantines",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 25
+
+  },
+  {
+    
+    "name": "Hennesy",
+    "category": "Whiskey",
+    "image": "/images/Hennesy.jpg",
+    "price": 2350,
+    "brand": "Whiskey",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 15
+  }, {
+    
+    "name": "Remy Martin",
+    "category": "Champaigne",
+    "image": "/images/RemrMartin.jpg",
+    "price": 4740,
+    "brand": "Grants",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 17
+  },
+  {
+    
+    "name": "Jack Daniels Single Barrel",
+    "category": "Vodka",
+    "image": "/images/JackD.jpg",
+    "price": 4540,
+    "brand": "Jack Daniels",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 21
+
+  },
+  {
+    
+    "name": "8 Pm premium Black Whiskey",
+    "category": "Whiskey",
+    "image": "/images/8pm.jpg",
+    "price": 740,
+    "brand": "Sheridans",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 17
+
+  },
+  {
+    
+    "name": "Robertson Winery",
+    "category": "Wine",
+    "image": "/images/Robertson.jpg",
+    "price": 4540,
+    "brand": "Jack Daniels",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 21
+
+  },
+  
+  {
+    
+    "name": "Red Label",
+    "category": "Whiskey",
+    "image": "/images/RedLabel.jpg",
+    "price": 945,
+    "brand": "Johnnie Walker",
+    "rating": 0,
+    "numReviews": 0,
+    "countInStock": 13
+
+  }
+]

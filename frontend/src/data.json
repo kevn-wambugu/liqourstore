@@ -1,0 +1,24 @@
+[{
+    
+  "name": "Jack Daniels",
+  "category": "Vodka",
+  "image": "/images/jack daniels.jpg",
+  "price": 4540,
+  "brand": "Jack Daniels",
+  "rating": 0,
+  "numReviews": 0,
+  "countInStock": 21
+
+},
+{
+  
+  "name": "Jack Daniels Honey",
+  "category": "Brandy",
+  "image": "/images/jack daniels honey.jpg",
+  "price": 4245,
+  "brand": "Viceroy",
+  "rating": 0,
+  "numReviews": 0,
+  "countInStock": 7
+
+}]

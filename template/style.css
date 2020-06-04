@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+html{
+  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body{
+  font: 1.5rem  'Inconsolata', monospace;
+  height: 100vh;
+  margin: 0;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 80%;
+}
+.header{
+  grid-area: header;
+  background-color: #252424;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.brand a{
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a{
+  color:#ffffff;
+  font-weight:bold ;
+  align-items: center;
+  text-decoration: none;
+  padding: 2rem;
+}
+input[type=text] {
+  width: 200px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+/*When the input field gets focus, change its width to 100%*/
+input[type=text]:focus {
+  width: 50%;
+}
+.header-links a{
+  color:#ffffff;
+  text-decoration: none;
+  padding: 1rem;
+
+}
+
+body{
+  background: #f2f2f2;
+  font-family: 'Inconsolata', monospace;
+}
+
+.header-links a:hover{
+  color:#ff8000;
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer;
+  background-color: #3d2222;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:#ff8000
+}
+/* Home Screen */
+.products {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li {
+  list-style-type: none;
+  padding: 0;
+  flex: 0 1 30rem;
+  margin: .5rem;
+  height: 40rem;
+  border-bottom: .1rem #c0c0c0 solid;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+.product-name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.product-brand{
+  font-size: 1.2rem;
+  color:#808080;
+}
+.product-price{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product-image{
+  max-width: 20rem;
+  max-height: 20rem;
+}
+.product-rating{
+  margin-bottom: 1rem;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 20px;
+  color: rgba(240, 242, 245, 0.822);
+  background-color: rgb(136, 112, 64);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 12px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+/* Sidebar */
