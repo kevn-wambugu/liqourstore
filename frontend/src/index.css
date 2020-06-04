@@ -14,16 +14,32 @@ body{
   height: 100vh;
   margin: 0;
 }
-/* Media Queries: Tablet Landscape */
-@media screen and (min-width: 1060px) {
-    #primary { width:67%; }
-    #secondary { width:30%; margin-left:3%;}  
+
+button{
+  font-size: 1.5rem;
 }
 
-/* Media Queries: Tabled Portrait */
-@media screen and (min-width: 768px) {
-    #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
+.review {
+  list-style-type: none;
+  padding: 0;
+}
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+.rating {
+  margin: .5rem 0;
+}
+.rating>span {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5rem;
+  color: silver;
+  line-height: 2rem;
+}
+.rating-container>div:last-child {
+  margin-top: .5rem;
+  margin-left: .5rem;
 }
 .full-width {
   width: 100%;
@@ -63,7 +79,6 @@ body{
   color:#ffffff;
   text-decoration: none;
   padding: 2.5rem;
-  display: inline-block;
 
 }
 .header-links a:hover{
@@ -73,7 +88,7 @@ body{
   display: inline-block;
   position:absolute;
   top: 5px;
-  right:75px;
+  right:130px;
   padding:.3rem;
   font-size: 1rem;
   border-radius: 50%;
@@ -161,8 +176,8 @@ a:hover{
   font-weight: 300;
 }
 .product-image{
-  max-width: 80%;
-  max-height: auto;
+  max-width: 34rem;
+  max-height: 34rem;
 }
 .product-rating{
   margin-bottom: 1.2rem;
