@@ -40,7 +40,7 @@ function App() {
             {<Link to="/category/Spirits">Spirits</Link>}
             {<Link to="/category/Others">Others</Link>}
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
-            {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
+            {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>} 
       
         {
               userInfo ? <Link to="/profile">{userInfo.name}</Link> :

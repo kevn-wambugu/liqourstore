@@ -14,6 +14,17 @@ body{
   height: 100vh;
   margin: 0;
 }
+/* Media Queries: Tablet Landscape */
+@media screen and (min-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (min-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 
 button{
   font-size: 1.5rem;
@@ -79,6 +90,7 @@ button{
   color:#ffffff;
   text-decoration: none;
   padding: 2.5rem;
+  display: inline-block;
 
 }
 .header-links a:hover{
@@ -88,7 +100,7 @@ button{
   display: inline-block;
   position:absolute;
   top: 5px;
-  right:130px;
+  right:75px;
   padding:.3rem;
   font-size: 1rem;
   border-radius: 50%;
@@ -176,8 +188,8 @@ a:hover{
   font-weight: 300;
 }
 .product-image{
-  max-width: 34rem;
-  max-height: 34rem;
+  max-width: 80%;
+  max-height: auto;
 }
 .product-rating{
   margin-bottom: 1.2rem;
