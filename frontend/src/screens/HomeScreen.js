@@ -40,18 +40,21 @@ function HomeScreen(props) {
           <button type="submit">Search</button>
         </form>
       </li>
-      <li>
-        Sort By {' '}
+     
+    </ul>
+     <aside>
+     <ul className="filter">
+       <h1> Sort By {' '}
         <select name="sortOrder" onChange={sortHandler}>
           <option value="">Newest</option>
           <option value="lowest">Lowest</option>
           <option value="highest">Highest</option>
         </select>
-      </li>
-  
-    </ul>
-    <aside>
-           <h1>{<Link to="/category/Beer">Beer</Link>}</h1>
+        </h1> 
+        </ul>
+
+      
+           <h2>{<Link to="/category/Beer">Beer</Link>}</h2>
             <h2>{<Link to="/category/Whiskey">Whiskey</Link>}</h2>
             <h2> {<Link to="/category/Brandy">Brandy</Link>}</h2>
             <h2>{<Link to="/category/Wines">Rum</Link>}</h2>
