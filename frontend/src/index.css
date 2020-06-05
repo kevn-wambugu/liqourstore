@@ -14,6 +14,9 @@ body{
   height: 100vh;
   margin: 0;
 }
+@-ms-viewport{
+  width: device-width;
+}
 /* Media Queries: Tablet Landscape */
 @media screen and (min-width: 1060px) {
   #primary { width:67%; }
@@ -72,7 +75,7 @@ button{
   grid-area: header;
   background-color: #93996e;
   color: #ffffff;
-  display: -webkit-inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
