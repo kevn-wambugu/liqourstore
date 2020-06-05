@@ -29,8 +29,6 @@ function App() {
       <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
         <a href="/">alchemis Liqours <i className="fas fa-glass-cheers"></i></a>
       </div>
-      <h2>Call us: +254 725 783259</h2>
-      <h2>Drinks delivered within Thika</h2>
     <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
@@ -76,7 +74,7 @@ function App() {
     <div id="footer">
       <div>
         <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
-        <h2>We offer free drinks delivery services in Thika</h2>
+        <h2>We offer free drinks delivery services in Thika.</h2>
 	      <h2>Excessive drinking of alcohol is harmful to your health.</h2>
         <h2> We only sell to persons above 18 years. Don't drink and drive.</h2>
       </div>
