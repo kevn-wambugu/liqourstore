@@ -33,9 +33,8 @@ function App() {
       <h2>Drinks delivered within Thika</h2>
     <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
-            {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
-      
+            {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
         {
               userInfo ? <Link to="/profile">{userInfo.name}</Link> :
                 <Link to="/signin">Sign In</Link>
@@ -72,29 +71,20 @@ function App() {
             <Route path="/" exact={true} component={HomeScreen} />
 
       </div>
-
+        
     </main>
     <div id="footer">
       <div>
-        <h3> Place order through a call, sms or whatsapp to 0725783259</h3>
-        <h3>We offer free drinks delivery services in Thika and its environs</h3>
-	      <h3>Excessive drinking of alcohol is harmful to your health.</h3>
-        <h3> We only sell to persons above 20 years. Don't drink and drive.</h3>
+        <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
+        <h2>We offer free drinks delivery services in Thika</h2>
+	      <h2>Excessive drinking of alcohol is harmful to your health.</h2>
+        <h2> We only sell to persons above 18 years. Don't drink and drive.</h2>
       </div>
       <div>
-      <div className="header-links">
-        <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet"></link>
-        
-        <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-instagram fa-2x"></i></a>
-        <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-twitter fa-2x"></i></a>
-        <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
-        </div>
-      </div>
-      <div>
-        <h2>@alchemis liqour store 2020.</h2>
+        <h2>Visit our Shop</h2>
         <h2>Thika Gatitu</h2>
-        <h2>All Rights Reserved </h2>
+        <h2>call:0725783259</h2>
+        <h2>All Rights Reserved.</h2>
 
       </div>
     </div>

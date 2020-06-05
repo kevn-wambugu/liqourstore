@@ -18,16 +18,6 @@ body{
   width: device-width;
 }
 /* Media Queries: Tablet Landscape */
-@media screen and (min-width: 1060px) {
-  #primary { width:67%; }
-  #secondary { width:30%; margin-left:3%;}  
-}
-
-/* Media Queries: Tabled Portrait */
-@media screen and (min-width: 768px) {
-  #primary { width:80%; }
-  #secondary { width:80%; margin:0; border:none; }
-}
 
 button{
   font-size: 1.5rem;
@@ -78,7 +68,7 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: .5rem;
 }
 .brand a{
   color: #ffffff;
@@ -90,7 +80,7 @@ button{
 .header-links a{
   font-family: 'Lemonada', cursive;
   justify-content: space-between;
-  color:#ffffff;
+  color:#858154;
   text-decoration: none;
   padding: 4.5rem;
 
@@ -145,7 +135,7 @@ p {
 #footer {
   display: inline-table;
   position: relative;
-  min-width: 149em;
+  max-width: 100%;
   padding: 1rem;
   margin: 0 auto;
   border: 0.062em solid #151515;

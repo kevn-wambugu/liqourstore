@@ -14,20 +14,7 @@ body{
   height: 100vh;
   margin: 0;
 }
-@-ms-viewport{
-  width: device-width;
-}
-/* Media Queries: Tablet Landscape */
-@media screen and (min-width: 1060px) {
-  #primary { width:67%; }
-  #secondary { width:30%; margin-left:3%;}  
-}
 
-/* Media Queries: Tabled Portrait */
-@media screen and (min-width: 768px) {
-  #primary { width:80%; }
-  #secondary { width:80%; margin:0; border:none; }
-}
 
 button{
   font-size: 1.5rem;
@@ -69,7 +56,7 @@ button{
   "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
-  height: auto
+  height: auto;
 }
 .header{
   grid-area: header;
@@ -89,8 +76,7 @@ button{
 }
 .header-links a{
   font-family: 'Lemonada', cursive;
-  justify-content: space-between;
-  color:#ffffff;
+  color:#20201d;
   text-decoration: none;
   padding: 4.5rem;
 
@@ -100,9 +86,9 @@ button{
 }
 .badge {
   display: inline-block;
-  position:absolute;
+  position: absolute;
   top: 5px;
-  right:150px;
+  right:160px;
   padding:.3rem;
   font-size: 1rem;
   border-radius: 50%;
@@ -144,13 +130,14 @@ p {
 
 #footer {
   display: inline-table;
-  position: relative;
-  min-width: 149em;
-  padding: 1rem;
+  position:-ms-page;
+  min-width: 98%;
+  padding: 10px;
   margin: 0 auto;
   border: 0.062em solid #151515;
   background-color:  #93996e;
   color:  #ffffff;
+  height: 50% ;
 }
 
 #footer div {
@@ -180,6 +167,11 @@ a{
 a:hover{
   color:#ff8000
 }
+@media screen and (max-width: 600px) {
+  .aside, .body {
+    width: 100%;
+  }
+}
 /* Home Screen */
 .products {
   display: flex;
@@ -190,7 +182,7 @@ a:hover{
 .products li {
   list-style-type: none;
   padding: 0;
-  flex: 0 1 32rem;
+  flex: 0 1 34rem;
   margin: .5rem;
   height: auto;
   border-bottom: .1rem #333a33 solid;
