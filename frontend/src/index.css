@@ -189,7 +189,7 @@ a:hover{
   flex-direction: column;
   list-style-type: none;
   padding: 0;
-  flex: 1 24% ;
+  flex: 1 24%  24rem;
   margin: .5rem;
   width: 50%;
   display:flex;
