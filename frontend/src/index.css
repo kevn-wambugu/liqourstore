@@ -78,7 +78,7 @@ button{
   font-family: 'Lemonada', cursive;
   color:#20201d;
   text-decoration: none;
-  padding: 4.5rem;
+  padding: 2.5rem;
 
 }
 .header-links a:hover{
@@ -208,15 +208,17 @@ a:hover{
   font-weight: 300;
 }
 .product-image
-  { max-width: 60%; height: auto; }
+  { max-width: 100%; height: auto; }
 .product-rating{
   margin-bottom: 1.2rem;
 }
 .product-buy{
   color: #ff8000;
   font-size: 2rem;
+  justify-content: space-between;
   font-weight: 300;
 }
+
 /* details */
 .details{
   display: flex;
