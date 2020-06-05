@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lemonada&display=swap');
 html{
-  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 9.5px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body{
@@ -99,7 +99,7 @@ button{
   display: inline-block;
   position:absolute;
   top: 5px;
-  right:160px;
+  right:150px;
   padding:.3rem;
   font-size: 1rem;
   border-radius: 50%;
@@ -142,7 +142,7 @@ p {
 #footer {
   display: inline-table;
   position: relative;
-  min-width: 145em;
+  min-width: 149em;
   padding: 1rem;
   margin: 0 auto;
   border: 0.062em solid #151515;
