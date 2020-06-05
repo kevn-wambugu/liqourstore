@@ -189,12 +189,11 @@ a:hover{
   flex-direction: column;
   list-style-type: none;
   padding: 0;
-  flex: 1 24%;
-  margin: .3rem;
-  width: 25%;
-  display:block;
+  flex: 1 24% ;
+  margin: .5rem;
+  width: 50%;
+  display:flex;
   height: auto;
-  border-bottom: .1rem #333a33 solid;
 }
 .product{
   display: flex;
