@@ -29,6 +29,8 @@ function HomeScreen(props) {
   }
 
   return <>
+  <main className="main">
+   <div className="content">
     {category &&
       <h2>{category}</h2>}
    <ul className="filter">
@@ -48,6 +50,22 @@ function HomeScreen(props) {
       </li>
   
     </ul>
+    <aside>
+           <h1>{<Link to="/category/Beer">Beer</Link>}</h1>
+            <h2>{<Link to="/category/Whiskey">Whiskey</Link>}</h2>
+            <h2> {<Link to="/category/Brandy">Brandy</Link>}</h2>
+            <h2>{<Link to="/category/Wines">Rum</Link>}</h2>
+            <h2>{<Link to="/category/Vodka">Vodka</Link>}</h2>
+            <h2>{<Link to="/category/Wines">Wines</Link>}</h2>
+            <h2>{<Link to="/category/Spirits">Local Spirits</Link>}</h2>
+            <h2>{<Link to="/category/Cognac">Cognac</Link>}</h2>
+            <h2>{<Link to="/category/Champaigne">Champaignes</Link>}</h2>
+            <h2>{<Link to="/category/Gin">Gin</Link>}</h2>
+            <h2>{<Link to="/category/Tequila">Tequila</Link>}</h2>
+            <h2>{<Link to="/category/Extras">Extras</Link>}</h2>
+            <h2>{<Link to="/category/Sodas">Sodas n Mixers</Link>}</h2>
+            <h2>{<Link to="/category/energy drinks">Energy Drinks</Link>}</h2>
+    </aside>
     {loading ? <div>Loading...</div> :
       error ? <div>{error}</div> :
         <ul className="products">
@@ -72,6 +90,8 @@ function HomeScreen(props) {
           }
         </ul>
     }
+    </div>
+    </main>
   </>
 
 }

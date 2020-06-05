@@ -54,33 +54,8 @@ function ProductScreen(props) {
                   </div>
                 </li>
                 <li>
-                  <div id="share-buttons">
-                    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://alchemisliqorstore.co.ke">
-                      <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-                    </a>
-                    <a href="http://www.facebook.com/sharer.php?u=https://alchemisliqorstore.co.ke" target="_blank">
-                      <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-                    </a>
-                    <a href="https://twitter.com/share?url=https://alchemisliqorstore.co.ke&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
-                     <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
-                    </a>
-                    <a href="https://plus.google.com/share?url=https://alchemisliqorstore.co.ke" target="_blank">
-                      <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
-                    </a>
-                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://alchemisliqorstore.co.ke" target="_blank">
-                      <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-                    </a>
-                  </div>
-                </li>
-                <li>
                   <div>{product.review}
                     </div>                  
-                </li>
-                <li>
-                  <p className="comment-form-comment">
-                  <label  for="comment"></label>
-                  <textarea id="comment" name="comment" cols="45" rows="8" ></textarea>
-                  </p>
                 </li>
                 
               </ul>
