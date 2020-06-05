@@ -78,7 +78,7 @@ button{
   font-family: 'Lemonada', cursive;
   color:#ffffff;
   text-decoration: none;
-  padding: 2.5rem;
+  padding: 1.5rem;
 
 }
 .header-links a:hover{
@@ -183,7 +183,7 @@ a:hover{
 .products li {
   list-style-type: none;
   padding: 0;
-  flex: 0 1 34rem;
+  flex: 0 1 24rem;
   margin: .5rem;
   height: auto;
   border-bottom: .1rem #333a33 solid;

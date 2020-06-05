@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
+import { CART_EMPTY_ITEMS } from '../constants/CartConstants';
+import Cookies from 'js-cookie';
+
 function PlaceOrderScreen(props) {
 
   const cart = useSelector(state => state.cart);
@@ -30,9 +33,13 @@ function PlaceOrderScreen(props) {
   }
   useEffect(() => {
     if (success) {
-      props.history.push("/order/" + order._id);
+      props.history.push(`/order/${order._id}`);
+      dispatch({ type: CART_EMPTY_ITEMS });
+      Cookies.remove('cartItems');
     }
-
+    return () => {
+      //
+    };
   }, [success]);
 
   return <div>
@@ -44,8 +51,16 @@ function PlaceOrderScreen(props) {
             Shipping
           </h3>
           <div>
-            {cart.shipping.mobnumber}, {cart.shipping.city},
-          {cart.shipping.postalCode}, {cart.shipping.country},
+            {cart.shipping.mobnumber}
+            , 
+            {' '}
+            {shipping.city}
+              ,
+              {' '}
+              {shipping.country}
+              ,
+              {' '}
+              {shipping.postalCode}
           </div>
         </div>
         <div>

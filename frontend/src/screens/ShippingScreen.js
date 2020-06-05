@@ -16,7 +16,7 @@ function ShippingScreen(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShipping({ mobnumber, city, postalCode, country })); 
-    props.history.push('payment');
+    props.history.push('/payment');
   }
   return<div>
     <CheckoutSteps step1 step2 ></CheckoutSteps>
@@ -30,28 +30,49 @@ function ShippingScreen(props) {
             <label htmlFor="mobnumber">
               Phone number
           </label>
-            <input type="tel" name="mobnumber" id="mobnumber" placeholder="0712345678" onChange={(e) => setAddress(e.target.value)}>
+            <input type="tel" 
+            name="mobnumber" 
+            id="mobnumber"
+            placeholder="0712345678" 
+            required
+            value={mobnumber}
+            onChange={(e) => setAddress(e.target.value)}>
             </input>
           </li>
           <li>
             <label htmlFor="city">
               City/town
           </label>
-            <input type="text" name="city" id="city" onChange={(e) => setCity(e.target.value)}>
+            <input type="text" 
+            name="city" 
+            id="city" 
+            required
+            value={city}
+            onChange={(e) => setCity(e.target.value)}>
             </input>
           </li>
           <li>
             <label htmlFor="postalCode">
               Residential area
           </label>
-            <input type="text" name="postalCode" id="postalCode" onChange={(e) => setPostalCode(e.target.value)}>
+            <input type="text" 
+            name="postalCode" 
+            id="postalCode" 
+            required
+            value={postalCode}
+            onChange={(e) => setPostalCode(e.target.value)}>
             </input>
           </li>
           <li>
             <label htmlFor="country">
               Estate
           </label>
-            <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
+            <input type="text" 
+            name="country" 
+            id="country" 
+            required
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}>
             </input>
           </li>
           <li>
