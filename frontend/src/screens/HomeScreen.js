@@ -82,7 +82,6 @@ function HomeScreen(props) {
                   </Link>
                   <div className="product-name">{product.name}
                   </div>
-                  <div className="product-brand">{product.brand}</div>
                   <div className="product-price">KSh {product.price}</div>
                   
                   <div className="product-buy">
