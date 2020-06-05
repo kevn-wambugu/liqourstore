@@ -76,7 +76,7 @@ button{
 }
 .header-links a{
   font-family: 'Lemonada', cursive;
-  color:#20201d;
+  color:#ffffff;
   text-decoration: none;
   padding: 2.5rem;
 
@@ -87,16 +87,17 @@ button{
 .badge {
   display: inline-block;
   position: absolute;
-  top: 5px;
-  right:160px;
-  padding:.3rem;
-  font-size: 1rem;
+  width: 1rem;
+  padding: .3rem;
   border-radius: 50%;
-  size: 1rem;
-  align-content:center;
-  color: #ffffff;
-  background-color: #ff8000;
-
+  font-size: 1rem;
+  text-align: center;
+  background: #ff4400;
+  color: #fefefe;
+  height: 1rem;
+  margin-left: -20px;
+  top: 5px;
+  line-height: 1rem;
 }
 
 .main{
