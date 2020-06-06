@@ -56,7 +56,7 @@ const detailsProduct = (productId) => async (dispatch) => {
   }
 }
 
-const deleteProdcut = (productId) => async (dispatch, getState) => {
+const deleteProduct = (productId) => async (dispatch, getState) => {
   try {
     const { userSignin: { userInfo } } = getState();
     dispatch({ type: PRODUCT_DELETE_REQUEST, payload: productId });
@@ -72,4 +72,4 @@ const deleteProdcut = (productId) => async (dispatch, getState) => {
   }
 }
 
-export { listProducts, detailsProduct, saveProduct, deleteProdcut }
+export { listProducts, detailsProduct, saveProduct, deleteProduct }

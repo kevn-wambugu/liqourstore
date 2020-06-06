@@ -118,14 +118,24 @@ aside {
   min-width: 20%;
   width: 20%;
 }
-
-aside > p {
-  margin: .5rem;
+@media screen and (min-width: 700px) {
+  .aside{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .aside{float: left;}
+  div.content {margin-left: 0;}
 }
 
-p {
-  font-family: 'Fira Sans', sans-serif;
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (min-width: 400px) {
+  .aside{
+    text-align: center;
+    float: none;
+  }
 }
+
 
 #footer {
   display: inline-table;
@@ -189,7 +199,7 @@ a:hover{
   flex-direction: column;
   list-style-type: none;
   padding: 0;
-  flex: 1 24%  24rem;
+  flex: 1 24% 19rem;
   margin: .5rem;
   width: 50%;
   display:flex;
