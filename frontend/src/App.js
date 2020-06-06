@@ -31,7 +31,7 @@ function App() {
       </div>
     <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
-            <a href="https://www.facebook.com/sharer.php?u=https://www.alchemisliqorstore.co.ke/products/" target= "_blank"><i className="fab fa-facebook-f fa-2x"></i></a>
+            
             <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
             {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}

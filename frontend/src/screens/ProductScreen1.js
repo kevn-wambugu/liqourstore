@@ -59,9 +59,9 @@ function ProductScreen(props) {
                 </li>
                 <li>
                 <div className="header-links">
-               <h5><a href="https://www.facebook.com/sharer.php?u=https://www.alchemisliqorstore.co.ke/products/" target= "_blank"><i className="fab fa-facebook-f fa-2x"></i></a>
+               <a href="https://www.facebook.com/sharer.php?u=https://www.alchemisliqorstore.co.ke/products/" target= "_blank"><i className="fab fa-facebook-f fa-2x"></i></a>
                  <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
-                <a href="https://www.twitter.com/share?u=https://www.alchemisliqorstore.co.ke/products/"><i className="fab fa-twitter fa-2x"></i></a></h5>
+                <a href="https://www.twitter.com/share?u=https://www.alchemisliqorstore.co.ke/products/"><i className="fab fa-twitter fa-2x"></i></a>
                 </div>
                 
                 </li>

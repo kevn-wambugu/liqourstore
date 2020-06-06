@@ -40,7 +40,7 @@ function HomeScreen(props) {
           <button type="submit">Search</button>
         </form>
       </li>
-     
+       
     </ul>
      <aside>
      <ul className="filter">
@@ -51,10 +51,8 @@ function HomeScreen(props) {
           <option value="highest">Highest</option>
         </select>
         </h1> 
-        </ul>
-
-      
-           <h2>{<Link to="/category/Beer">Beer</Link>}</h2>
+        </ul>   
+           <h1>{<Link to="/category/Beer">Beer</Link>}</h1>
             <h2>{<Link to="/category/Whiskey">Whiskey</Link>}</h2>
             <h2> {<Link to="/category/Brandy">Brandy</Link>}</h2>
             <h2>{<Link to="/category/Wines">Rum</Link>}</h2>
