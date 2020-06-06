@@ -118,23 +118,7 @@ aside {
   min-width: 20%;
   width: 20%;
 }
-@media screen and (max-width: 700px) {
-  .aside{
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .aside{float: left;}
-  div.content {margin-left: 0;}
-}
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-  .aside{
-    text-align: center;
-    float: none;
-  }
-}
 
 
 #footer {
@@ -199,7 +183,7 @@ a:hover{
   flex-direction: column;
   list-style-type: none;
   padding: 0;
-  flex: 1 24% 24rem;
+  flex: 1 24% 19rem;
   margin: .5rem;
   width: 50%;
   display:flex;
