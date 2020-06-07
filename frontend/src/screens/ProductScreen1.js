@@ -57,15 +57,6 @@ function ProductScreen(props) {
                   <div>{product.review}
                     </div>                  
                 </li>
-                <li>
-                <div className="header-links">
-               <a href="https://www.facebook.com/sharer.php?u=https://www.alchemisliqorstore.co.ke/products/" target= "_blank"><i className="fab fa-facebook-f fa-2x"></i></a>
-                 <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
-                <a href="https://www.twitter.com/share?u=https://www.alchemisliqorstore.co.ke/products/"><i className="fab fa-twitter fa-2x"></i></a>
-                </div>
-                
-                </li>
-                
               </ul>
             </div>
             <div className="details-action">
