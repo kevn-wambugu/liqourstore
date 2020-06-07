@@ -57,7 +57,7 @@ function SigninScreen(props) {
           <button type="submit" className="button primary">Signin</button>
         </li>
         <li>
-          New to Alchemist Liqours?
+          New to Alchemis Liqours?
         </li>
         <li>
           <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create your Alchemist account</Link>
