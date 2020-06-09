@@ -1,69 +1,102 @@
 import express from 'express';
+import asyncHandler from 'express-async-handler';
 import Order from '../models/orderModel';
 import { isAuth, isAdmin } from '../util';
 
 const router = express.Router();
 
-router.get("/", isAuth, async (req, res) => {
-  const orders = await Order.find({}).populate('user');
-  res.send(orders);
-});
-router.get("/mine", isAuth, async (req, res) => {
-  const orders = await Order.find({ user: req.user._id });
-  res.send(orders);
-});
+router.get('/', isAuth, isAdmin, asyncHandler(async (req, res) => {
+  const products = await Order.find({}).populate('user');
+  res.send(products);
+}));
 
-router.get("/:id", isAuth, async (req, res) => {
-  const order = await Order.findOne({ _id: req.params.id });
-  if (order) {
-    res.send(order);
+router.get('/mine', isAuth, asyncHandler(async (req, res) => {
+  const products = await Order.find({ user: req.user._id });
+  res.send(products);
+}));
+
+router.get('/categories', asyncHandler(async (req, res) => {
+  const categories = await Order.find().distinct('category');
+  res.send(categories);
+}));
+
+router.get('/:id', asyncHandler(async (req, res) => {
+  const product = await Order.findById(req.params.id);
+  if (product) {
+    res.send(product);
   } else {
-    res.status(404).send("Order Not Found.")
+    throw Error('Order not found.');
   }
-});
-
-router.delete("/:id", isAuth, isAdmin, async (req, res) => {
-  const order = await Order.findOne({ _id: req.params.id });
-  if (order) {
-    const deletedOrder = await order.remove();
-    res.send(deletedOrder);
-  } else {
-    res.status(404).send("Order Not Found.")
-  }
-});
-
-router.post("/", isAuth, async (req, res) => {
-  const newOrder = new Order({
-    orderItems: req.body.orderItems,
-    user: req.user._id,
-    shipping: req.body.shipping,
+}));
+router.post('/', isAuth, asyncHandler(async (req, res) => {
+  const product = new Order({
+    orderItems: req.body.cartItems,
     payment: req.body.payment,
-    itemsPrice: req.body.itemsPrice,
+    shipping: req.body.shipping,
+    itemPrice: req.body.itemPrice,
     shippingPrice: req.body.shippingPrice,
     totalPrice: req.body.totalPrice,
+    taxPrice: req.body.taxPrice,
+    user: req.user._id,
   });
-  const newOrderCreated = await newOrder.save();
-  res.status(201).send({ message: "New Order Created", data: newOrderCreated });
-});
-
-router.put("/:id/pay", isAuth, async (req, res) => {
+  const newOrder = await product.save();
+  res.send({ message: 'Order Created', data: newOrder });
+}));
+router.put('/:id/pay', isAuth, asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
   if (order) {
+    order.payment.paymentResult = {
+      orderID: req.body.orderID,
+      payerID: req.body.payerID,
+      paymentID: req.body.paymentID,
+    };
     order.isPaid = true;
     order.paidAt = Date.now();
-    order.payment = {
-      paymentMethod: 'paypal',
-      paymentResult: {
-        payerID: req.body.payerID,
-        orderID: req.body.orderID,
-        paymentID: req.body.paymentID
-      }
-    }
+
     const updatedOrder = await order.save();
-    res.send({ message: 'Order Paid.', order: updatedOrder });
+    res.send({ message: 'Order Paid', data: updatedOrder });
   } else {
-    res.status(404).send({ message: 'Order not found.' })
+    throw Error('Order does not exist.');
   }
-});
+}));
+router.put('/:id/deliver', isAuth, isAdmin, asyncHandler(async (req, res) => {
+  const order = await Order.findById(req.params.id);
+  if (order) {
+    order.isDelivered = true;
+    order.deliveredAt = Date.now();
+
+    const updatedOrder = await order.save();
+    res.send({ message: 'Order Delivered', data: updatedOrder });
+  } else {
+    throw Error('Order does not exist.');
+  }
+}));
+
+router.put('/:id', isAuth, isAdmin, asyncHandler(async (req, res) => {
+  const product = await Order.findById(req.params.id);
+  if (product) {
+    product.name = req.body.name || product.name;
+    product.price = req.body.price || product.price;
+    product.countInStock = req.body.countInStock || product.countInStock;
+    product.image = req.body.image || product.image;
+    product.category = req.body.category || product.category;
+    product.brand = req.body.brand || product.brand;
+    product.features = req.body.features || product.features;
+
+    const updatedOrder = await product.save();
+    res.send({ message: 'Order Updated', data: updatedOrder });
+  } else {
+    throw Error('Order does not exist.');
+  }
+}));
+router.delete('/:id', isAuth, isAdmin, asyncHandler(async (req, res) => {
+  const product = await Order.findById(req.params.id);
+  if (product) {
+    const removeOrder = await product.remove();
+    res.send({ message: 'Order Deleted', data: removeOrder });
+  } else {
+    throw Error('Order already removed.');
+  }
+}));
 
 export default router;

@@ -26,6 +26,7 @@
     "escape-string-regexp": "^1.0.5",
     "esutils": "^2.0.3",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "express-fileupload": "^1.1.7-alpha.3",
     "extend-shallow": "^3.0.2",
     "file-uri-to-path": "^1.0.0",
@@ -130,9 +131,9 @@
   "scripts": {
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
     "build": "rm -rf dist && babel backend -d dist",
-    "install-frontend":"cd frontend && npm install",
+    "install-frontend": "cd frontend && npm install",
     "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build",
-    "frontend":"cd frontend && npm start"
+    "frontend": "cd frontend && npm start"
   },
   "engines": {
     "node": "12.16.3",

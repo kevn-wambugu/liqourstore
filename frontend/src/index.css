@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lemonada&display=swap');
 html{
-  font-size: 7.5px; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 9.5px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body{
@@ -61,7 +61,7 @@ button{
   grid-area: header;
   background-color: #93996e;
   color: #ffffff;
-  display: flex;
+  display:-webkit-flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -164,6 +164,7 @@ a{
 a:hover{
   color:#ff8000
 }
+
 /* Home Screen */
 .products {
   display: flex;
@@ -256,6 +257,7 @@ a:hover{
 }
 .back-to-result {
   padding: 1.5rem;
+  font-size: large;
 }
 .details-action{
   border: .5rem #808080 solid;
