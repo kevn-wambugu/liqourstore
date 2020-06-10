@@ -60,7 +60,7 @@ function HomeScreen(props) {
             <h2>{<Link to="/category/WINE">WINE</Link>}</h2>
             <h2>{<Link to="/category/SPIRITS">SPIRITS</Link>}</h2>
             <h2>{<Link to="/category/COGNAC">COGNAC</Link>}</h2>
-            <h2>{<Link to="/category/CHAMPAIGNES">CHAMPAIGNES</Link>}</h2>
+            <h2>{<Link to="/category/CHAMPAIGNES">CHAMPAIGNE</Link>}</h2>
             <h2>{<Link to="/category/GIN">GIN</Link>}</h2>
             <h2>{<Link to="/category/TEQUILA">TEQUILA</Link>}</h2>
             <h2>{<Link to="/category/CREAMS">CREAMS</Link>}</h2>

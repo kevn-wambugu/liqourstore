@@ -82,7 +82,7 @@ function App() {
       </div>
       <div>
         <h1>VISIT OUR SHOP</h1>
-       <h1> <a href="https://www.google.com/maps/search/thika+gatitu/@-1.043046,37.066510,16.64z/data=!3m1!4b1 ">Get Directions</a></h1>
+       <h1> <a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">Get Directions</a></h1>
         <h2>Thika Gatitu</h2>
         <h2>All Rights Reserved.</h2>
 
