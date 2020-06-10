@@ -26,7 +26,7 @@ function App() {
     <div className="grid-container">
     <header className="header">
       <div className="brand">
-      <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
+      <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
         <a href="/">alchemis Liqours <i className="fas fa-glass-cheers"></i></a>
       </div>
     <div className="header-links">
@@ -75,15 +75,15 @@ function App() {
     </main>
     <div id="footer">
       <div>
+        <h1>ALCHEMIS LIQOUR STORE</h1>
         <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
         <h2>We offer free drinks delivery services in Thika.</h2>
-	      <h2>Excessive drinking of alcohol is harmful to your health.</h2>
-        <h2> We only sell to persons above 18 years. Don't drink and drive.</h2>
+        <h2> We only sell to persons above 18 years></h2>
       </div>
       <div>
-        <h2>Visit our Shop</h2>
+        <h1>VISIT OUR SHOP</h1>
+       <h1> <a href="https://www.google.com/maps/search/thika+gatitu/@-1.0409639,37.0704896,16.64z/data=!3m1!4b1 ">Get Directions</a></h1>
         <h2>Thika Gatitu</h2>
-        <h2>call:0725783259</h2>
         <h2>All Rights Reserved.</h2>
 
       </div>

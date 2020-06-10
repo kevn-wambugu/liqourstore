@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lemonada&display=swap');
 html{
-  font-size: 9.5px; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 7.5px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body{
@@ -128,12 +128,14 @@ p {
 }
 
 #footer {
+  
+  font-family: 'Quicksand', sans-serif;
   display: inline-table;
   width: 100%;
   padding: 0;
   border: 0.062em solid #151515;
   grid-area: footer;
-  background-color: #93996e;
+  background-color: #0c1a1e;
   color: #ffffff;
   justify-content: center;
   align-items: center;

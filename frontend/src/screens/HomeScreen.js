@@ -47,8 +47,8 @@ function HomeScreen(props) {
        <h1> Sort By {' '}
         <select name="sortOrder" onChange={sortHandler}>
           <option value="">Newest</option>
-          <option value="lowest">Lowest</option>
-          <option value="highest">Highest</option>
+          <option value="lowest">Highest to Lowest</option>
+          <option value="highest">Lowest to Highest</option>
         </select>
         </h1> 
         </ul>   
