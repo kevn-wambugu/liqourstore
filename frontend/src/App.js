@@ -26,10 +26,10 @@ function App() {
     <div className="grid-container">
     <header className="header">
       <div className="brand">
-      <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
+        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
         <a href="/">alchemis Liqours <i className="fas fa-glass-cheers"></i></a>
       </div>
-    <div className="header-links">
+      <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
             
             <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>

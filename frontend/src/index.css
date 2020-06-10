@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lemonada&display=swap');
 html{
-  font-size: 7.5px; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 9.5px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body{
@@ -37,6 +37,69 @@ button{
   color: silver;
   line-height: 2rem;
 }
+input,
+button,
+textarea,
+select {
+  font: 1.6rem Helvetica;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: #0040c0;
+  text-decoration: none;
+}
+a:hover {
+  color: #c04000;
+}
+.block-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.loading{
+  z-index: 10;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-error{
+  color: #f04000;
+} 
+.text-success{
+  color: #008000;
+}
+.button {
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+}
+.button:hover {
+  border: 0.1rem #404040 solid;
+}
+.primary {
+  background: #f0c000;
+}
+.secondary {
+  background: #f0f0f0;
+}
+table{
+  width: 100%;
+}
+th{
+  text-align: left;
+}
+tbody> tr:nth-child(odd){
+  background-color: #f0f0f0;
+
+}
+td{
+  padding: 1rem;
+}
 .rating-container>div:last-child {
   margin-top: .5rem;
   margin-left: .5rem;
@@ -59,13 +122,13 @@ button{
 }
 .header{
   grid-area: header;
-  background-color: #93996e;
+  background-color: #0c1a1e;
   color: #ffffff;
-  display:-webkit-flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
 }
-.brand a{
+.brand a{ 
   color: #ffffff;
   font-family: 'Shadows Into Light', cursive;
   font-size: 3rem;
@@ -76,6 +139,7 @@ button{
   font-family: 'Lemonada', cursive;
   color:#ffffff;
   text-decoration: none;
+  font-size: 1.2rem;
   padding: 1rem;
 
 }
