@@ -78,11 +78,11 @@ function App() {
         <h1>ALCHEMIS LIQOUR STORE</h1>
         <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
         <h2>We offer free drinks delivery services in Thika.</h2>
-        <h2> We only sell to persons above 18 years></h2>
+        <h2> We only sell to persons above 18 years</h2>
       </div>
       <div>
         <h1>VISIT OUR SHOP</h1>
-       <h1> <a href="https://www.google.com/maps/search/thika+gatitu/@-1.0409639,37.0704896,16.64z/data=!3m1!4b1 ">Get Directions</a></h1>
+       <h1> <a href="https://www.google.com/maps/search/thika+gatitu/@-1.043046,37.066510,16.64z/data=!3m1!4b1 ">Get Directions</a></h1>
         <h2>Thika Gatitu</h2>
         <h2>All Rights Reserved.</h2>
 
