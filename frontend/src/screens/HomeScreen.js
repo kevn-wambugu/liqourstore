@@ -44,7 +44,8 @@ function HomeScreen(props) {
     </ul>
      <aside>
      <ul className="filter">
-       <h1> Sort By {' '}
+     <h1>
+         <h2> Sort By</h2> 
         <select name="sortOrder" onChange={sortHandler}>
           <option value="">Newest</option>
           <option value="lowest">Highest to Lowest</option>
@@ -52,7 +53,7 @@ function HomeScreen(props) {
         </select>
         </h1> 
         </ul>   
-           <h1>{<Link to="/category/BEER">BEER</Link>}</h1>
+            <h1>{<Link to="/category/BEER">BEER</Link>}</h1>
             <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
             <h2> {<Link to="/category/BRANDY">BRANDY</Link>}</h2>
             <h2>{<Link to="/category/WINES">RUM</Link>}</h2>
@@ -78,7 +79,7 @@ function HomeScreen(props) {
               <li key={product._id}>
                 <div className="product">
                   <Link to={'/product/' + product._id}>
-                    <img className="product-image" src={product.image} alt="product" />
+                    <img className="product-image" src={product.image} alt={product.name} />
 
                   </Link>
                   <div className="product-name">{product.name}
