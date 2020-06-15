@@ -74,7 +74,7 @@ function App() {
                 X
               </button>
             </li>
-            <li><h2>{<Link to="/category/BEER">BEER</Link>}</h2></li>
+            <h2>{<Link to="/category/BEER">BEER</Link>}</h2>
             <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
             <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
             <h2>{<Link to="/category/WINES">RUM</Link>}</h2>
@@ -89,7 +89,6 @@ function App() {
             <h2>{<Link to="/category/ROLLING PAPERS">ROLLING PAPERS</Link>}</h2>
             <h2>{<Link to="/category/SHOOTERS">SHOOTERS</Link>}</h2>
             <h2>{<Link to="/category/Extras">EXTRAS</Link>}</h2>
-            <h2>{<Link to="/category/SODAS N MIXERS">SODAS n MIXERS</Link>}</h2>
             <h2>{<Link to="/category/ENERGY DRINKS">ENERGY DRINKS</Link>}</h2>
           </ul>
         </aside>
