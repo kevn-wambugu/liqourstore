@@ -43,12 +43,10 @@ function App() {
       <div className="brand">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
         <button type="button" onClick={openSidebar}>&#9776;</button>
-        <a href="/">alchemis Liqours <i className="fas fa-glass-cheers"></i></a>
+        <a href="/">alchemis Liqours</a>
       </div>
       <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
-            
-            <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
             {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
         {
@@ -118,16 +116,17 @@ function App() {
     </main>
     <div id="footer">
       <div className="f1">
-        <h1>ALCHEMIS LIQOUR STORE</h1>
-        <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
-        <h2> We offer free drinks delivery services in Thika.</h2>
+       <h1>CONTACT US</h1>
+        <h2><a href="https://wa.me/254725783259"> Phone : 0725783259</a></h2>
+        <h2> Email: mikethealchemis@yahoo.com</h2>
         <h2> We only sell to persons above 18 years</h2>
       </div>
       <div className="f2">
           <h1>FOLLOW US</h1>
-          <h1><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h1>
-          <h1><a href="https://www.instagram.com/alchemisliqours/?hl=en">Instagram</a></h1>
-          <h1><a href="https://www.Twitter.com/">Twitter</a></h1>
+          <h2><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h2>
+          <h2><a href="https://www.instagram.com/alchemisliqours/?hl=en">Instagram</a></h2>
+          <h2><a href="https://www.Twitter.com/">Twitter</a></h2>
+          
       </div>
       <div className="f3">
         <h1>VISIT OUR SHOP</h1>
