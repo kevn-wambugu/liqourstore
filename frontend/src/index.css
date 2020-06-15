@@ -299,10 +299,10 @@ a:hover{
   align-self: flex-start;
   flex-direction: row;
   padding: 0;
-  flex: .2 .2 32rem;
+  flex: 1 1 30rem;
   margin: .1rem;
-  max-width: 50%;
-  display:flex;
+  max-width: 100%;
+  display:grid;
   height: 100%;
 }
 .product{
@@ -311,6 +311,7 @@ a:hover{
   justify-content: space-between;
   height: auto;
 }
+
 .product-name{
   font-family: 'Quicksand', sans-serif;
   color: #414442;
@@ -328,7 +329,7 @@ a:hover{
   font-weight: 300;
 }
 .product-image
-  { max-width: 60%; height: auto; }
+  { max-width: 70%; height: auto; }
 .product-rating{
   margin-bottom: 1.2rem;
 }
