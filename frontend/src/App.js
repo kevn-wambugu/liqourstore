@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen1';
+import OrdersScreen from './screens/OrdersScreen';
 import CartScreen from './screens/CartScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import SigninScreen from './screens/SignInScreen';
-import { useSelector } from 'react-redux';
 import RegisterScreen from './screens/RegisterScreen';
-import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import { listProductCategories } from './actions/Productactions';
+import LoadingBox from './components/LoadingBox';
+import ErrorBox from './components/ErrorBox';
+import ProductsScreen from './screens/ProductsScreen';
 import OrderScreen from './screens/OrderScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import OrdersScreen from './screens/OrdersScreen';
 
 function App() {
 
+  const productCategoryList = useSelector((state) => state.productCategoryList);
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-  const userSignin = useSelector(state => state.userSignin);
+  const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  window.isAuth = !!userInfo;
+  const { categories, loading, error } = productCategoryList || {};
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProductCategories());
+    return () => {
+      //
+    };
+  }, []);
+  const openSidebar = () => document.querySelector('.sidebar').classList.add('open');
+  const closeSidebar = () => document.querySelector('.sidebar').classList.remove('open');
 
   return (
   <BrowserRouter>
@@ -27,6 +42,7 @@ function App() {
     <header className="header">
       <div className="brand">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
+        <button type="button" onClick={openSidebar}>&#9776;</button>
         <a href="/">alchemis Liqours <i className="fas fa-glass-cheers"></i></a>
       </div>
       <div className="header-links">
@@ -45,14 +61,41 @@ function App() {
                 <ul className="dropdown-content">
                   <li>
                     <Link to="/orders">Orders</Link>
-                    <Link to="/products">Products</Link>
+                    <Link  to="/products">Products</Link>
                   </li>
                 </ul>
               </div>
             )}
       </div>
     </header>
-    <main className="main">
+        <aside className="sidebar">
+          <ul className="categories">
+            <li>
+            <h1>Shopping Categories</h1>
+              <button type="button" className="sidebar-menu-close" onClick={closeSidebar}>
+                X
+              </button>
+            </li>
+            <li><h2>{<Link to="/category/BEER">BEER</Link>}</h2></li>
+            <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
+            <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
+            <h2>{<Link to="/category/WINES">RUM</Link>}</h2>
+            <h2>{<Link to="/category/VODKA">VODKA</Link>}</h2>
+            <h2>{<Link to="/category/WINE">WINE</Link>}</h2>
+            <h2>{<Link to="/category/SPIRITS">SPIRITS</Link>}</h2>
+            <h2>{<Link to="/category/COGNAC">COGNAC</Link>}</h2>
+            <h2>{<Link to="/category/CHAMPAGNE">CHAMPAGNE</Link>}</h2>
+            <h2>{<Link to="/category/GIN">GIN</Link>}</h2>
+            <h2>{<Link to="/category/TEQUILA">TEQUILA</Link>}</h2>
+            <h2>{<Link to="/category/CREAMS">CREAMS</Link>}</h2>
+            <h2>{<Link to="/category/ROLLING PAPERS">ROLLING PAPERS</Link>}</h2>
+            <h2>{<Link to="/category/SHOOTERS">SHOOTERS</Link>}</h2>
+            <h2>{<Link to="/category/Extras">EXTRAS</Link>}</h2>
+            <h2>{<Link to="/category/SODAS N MIXERS">SODAS n MIXERS</Link>}</h2>
+            <h2>{<Link to="/category/ENERGY DRINKS">ENERGY DRINKS</Link>}</h2>
+          </ul>
+        </aside>
+        <main onClick={closeSidebar} className="main">
     
       <div className="content">
       
