@@ -285,6 +285,7 @@ a:hover{
 /* Home Screen */
 .products {
   display: flex;
+  flex-direction: row;
   justify-content:space-between;
   align-items:flex-start;
   flex-wrap: wrap;
@@ -327,7 +328,7 @@ a:hover{
   font-weight: 300;
 }
 .product-image
-  { max-width: 50%; height: auto; }
+  { max-width: 60%; height: auto; }
 .product-rating{
   margin-bottom: 1.2rem;
 }
