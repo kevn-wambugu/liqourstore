@@ -206,10 +206,23 @@ p {
 
 }
 
-#footer div {
+.f1{
   display: table-cell;
-  width: 50%;
+  width: 33%;
   padding: 1em;
+  text-align: center;
+}
+.f2{
+  display: table-cell;
+  width: 33%;
+  padding: 1em;
+  text-align: center;
+}
+.f3{
+  display: table-cell;
+  width: 33%;
+  padding: 1em;
+  align-items: center;
   text-align: center;
 }
 

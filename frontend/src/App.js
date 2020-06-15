@@ -74,15 +74,21 @@ function App() {
         
     </main>
     <div id="footer">
-      <div>
+      <div className="f1">
         <h1>ALCHEMIS LIQOUR STORE</h1>
         <h2> Place order through a call, sms or whatsapp to 0725783259.</h2>
-        <h2>We offer free drinks delivery services in Thika.</h2>
+        <h2> We offer free drinks delivery services in Thika.</h2>
         <h2> We only sell to persons above 18 years</h2>
       </div>
-      <div>
+      <div className="f2">
+          <h1>FOLLOW US</h1>
+          <h1><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h1>
+          <h1><a href="https://www.instagram.com/alchemisliqours/?hl=en">Instagram</a></h1>
+          <h1><a href="https://www.Twitter.com/">Twitter</a></h1>
+      </div>
+      <div className="f3">
         <h1>VISIT OUR SHOP</h1>
-       <h1> <a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">Get Directions</a></h1>
+        <h1><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></h1>
         <h2>Thika Gatitu</h2>
         <h2>All Rights Reserved.</h2>
       </div>
