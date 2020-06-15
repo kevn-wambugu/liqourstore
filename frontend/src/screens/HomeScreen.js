@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/Productactions';
 
@@ -44,8 +43,8 @@ function HomeScreen(props) {
     </ul>
      <aside>
      <ul className="filter">
-     <h1>
-         <h2> Sort By</h2> 
+        <h1>
+    <h4> Sort By {" "}</h4> 
         <select name="sortOrder" onChange={sortHandler}>
           <option value="">Newest</option>
           <option value="lowest">Highest to Lowest</option>
@@ -53,9 +52,9 @@ function HomeScreen(props) {
         </select>
         </h1> 
         </ul>   
-            <h1>{<Link to="/category/BEER">BEER</Link>}</h1>
+            <h2>{<Link to="/category/BEER">BEER</Link>}</h2>
             <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
-            <h2> {<Link to="/category/BRANDY">BRANDY</Link>}</h2>
+            <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
             <h2>{<Link to="/category/WINES">RUM</Link>}</h2>
             <h2>{<Link to="/category/VODKA">VODKA</Link>}</h2>
             <h2>{<Link to="/category/WINE">WINE</Link>}</h2>
@@ -80,7 +79,6 @@ function HomeScreen(props) {
                 <div className="product">
                   <Link to={'/product/' + product._id}>
                     <img className="product-image" src={product.image} alt={product.name} />
-
                   </Link>
                   <div className="product-name">{product.name}
                   </div>

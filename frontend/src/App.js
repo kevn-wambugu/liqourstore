@@ -85,7 +85,6 @@ function App() {
        <h1> <a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">Get Directions</a></h1>
         <h2>Thika Gatitu</h2>
         <h2>All Rights Reserved.</h2>
-
       </div>
     </div>
  </div>
