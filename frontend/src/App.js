@@ -43,7 +43,7 @@ function App() {
       <div className="brand">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
         <button type="button" onClick={openSidebar}>&#9776;</button>
-        <a href="/">alchemis Liqours</a>
+        <a href="/">Alchemis Liqours</a>
       </div>
       <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
