@@ -49,6 +49,7 @@ function HomeScreen(props) {
       </li>
   
     </ul>
+			
     {loading ? <div>Loading...</div> :
       error ? <div>{error}</div> :
         <ul className="products">

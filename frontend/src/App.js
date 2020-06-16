@@ -87,7 +87,6 @@ function App() {
             <h2>{<Link to="/category/COGNAC">COGNAC</Link>}</h2>
             <h2>{<Link to="/category/CHAMPAGNE">CHAMPAGNE</Link>}</h2>
             <h2>{<Link to="/category/GIN">GIN</Link>}</h2>
-            <h2>{<Link to="/category/TEQUILA">TEQUILA</Link>}</h2>
             <h2>{<Link to="/category/CREAMS">CREAMS</Link>}</h2>
             <h2>{<Link to="/category/ROLLING PAPERS">ROLLING PAPERS</Link>}</h2>
             <h2>{<Link to="/category/SHOOTERS">SHOOTERS</Link>}</h2>
@@ -117,32 +116,50 @@ function App() {
       </div>
         
     </main>
-    <div id="footer">
-      <div className="f1">
-      <div className="footer-links">
-       <h1>CONTACT US</h1>
-        <h2><a href="https://wa.me/254725783259"> Phone : 0725783259</a></h2>
-        <h2> Email: mikethealchemis@yahoo.com</h2>
-        <h2> We only sell to persons above 18 years.</h2>
-        </div>
-      </div>
-      <div className="f2">
-      <div className="footer-links">
-          <h1>FOLLOW US</h1>
-          <h1><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h1>
-          <h2><a href="https://www.instagram.com/alchemisliqours/?hl=en">Instagram</a></h2>
-          <h2><a href="https://www.Twitter.com/">Twitter</a></h2>
-          </div>
-      </div>
-      <div className="f3">
-        <div className="footer-links">
-        <h1>VISIT OUR SHOP</h1>
-        <h2><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></h2>
-        <h2>Thika Gatitu</h2>
-        <h2>All Rights Reserved.</h2>
-        </div>
-      </div>
-    </div>
+    <footer class="footer-distributed">
+ 
+			<div class="footer-left">
+				<h3><span>Alchemis Liqours<i className="fas fa-glass-cheers"></i></span></h3>
+ 
+				<p class="footer-links">
+					<a href="/">Home</a>
+					|
+					<a href="/">About</a>
+					|
+					<a href="/">Contact</a>
+				</p>
+ 
+				<p class="footer-company-name">©2020 Alchemis Liqours.</p>
+			</div>
+ 
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></span>
+            </p>
+				</div>
+ 
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+254 725783259</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:mikethealchemis@yahoo.com">mikethealchemis@yahoo.com</a></p>
+				</div>
+		   	</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About us</span>
+					Alchemist Liqours Bring ease and convenience of buying and ordering alcohol delivery Thika. Whether you are looking for whisky or wine we got you covered. Your favorite drink is a dial away, Dial a drink Kenya and enjoy.</p>
+				<div class="footer-icons">
+        <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/alchemisliqours/?hl=en"><i className="fab fa-instagram "></i></a>
+        <a href="https://www.Twitter.com"><i className="fab fa-twitter "></i></a>
+        <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp"></i></a>
+				</div>
+			</div>
+		</footer>
  </div>
  
 </BrowserRouter>
