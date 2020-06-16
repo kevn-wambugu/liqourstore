@@ -69,7 +69,9 @@ function App() {
         <aside className="sidebar">
           <ul className="categories">
             <li>
-            <h1>SHOP BY CATEGORY</h1>
+            <div className="category-links">
+              <h1>SHOP BY CATEGORY</h1>
+            </div> 
               <button type="button" className="sidebar-menu-close" onClick={closeSidebar}>
                 X
               </button>
