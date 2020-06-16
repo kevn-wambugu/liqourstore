@@ -64,7 +64,9 @@ function HomeScreen(props) {
                   <div className="product-price">KSH {product.price}</div>
                   
                   <div className="product-buy">
+                  <Link to={'/product/' + product._id}>
                    BUY NOW <i className="fas fa-cart-arrow-down fa-2x"></i>
+                   </Link>
                   </div>
                   
                 </div>

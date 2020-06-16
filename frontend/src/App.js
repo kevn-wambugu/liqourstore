@@ -69,11 +69,12 @@ function App() {
         <aside className="sidebar">
           <ul className="categories">
             <li>
-            <h1>Shopping Categories</h1>
+            <h1>SHOP BY CATEGORY</h1>
               <button type="button" className="sidebar-menu-close" onClick={closeSidebar}>
                 X
               </button>
             </li>
+            <div className="category-links">
             <h2>{<Link to="/category/BEER">BEER</Link>}</h2>
             <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
             <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
@@ -90,6 +91,7 @@ function App() {
             <h2>{<Link to="/category/SHOOTERS">SHOOTERS</Link>}</h2>
             <h2>{<Link to="/category/Extras">EXTRAS</Link>}</h2>
             <h2>{<Link to="/category/ENERGY DRINKS">ENERGY DRINKS</Link>}</h2>
+            </div>
           </ul>
         </aside>
         <main onClick={closeSidebar} className="main">
@@ -115,23 +117,28 @@ function App() {
     </main>
     <div id="footer">
       <div className="f1">
+      <div className="footer-links">
        <h1>CONTACT US</h1>
         <h2><a href="https://wa.me/254725783259"> Phone : 0725783259</a></h2>
         <h2> Email: mikethealchemis@yahoo.com</h2>
-        <h2> We only sell to persons above 18 years</h2>
+        <h2> We only sell to persons above 18 years.</h2>
+        </div>
       </div>
       <div className="f2">
+      <div className="footer-links">
           <h1>FOLLOW US</h1>
-          <h2><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h2>
+          <h1><a href="https://www.facebook.com/groups/961397400867395/">Facebook</a></h1>
           <h2><a href="https://www.instagram.com/alchemisliqours/?hl=en">Instagram</a></h2>
           <h2><a href="https://www.Twitter.com/">Twitter</a></h2>
-          
+          </div>
       </div>
       <div className="f3">
+        <div className="footer-links">
         <h1>VISIT OUR SHOP</h1>
-        <h1><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></h1>
+        <h2><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></h2>
         <h2>Thika Gatitu</h2>
         <h2>All Rights Reserved.</h2>
+        </div>
       </div>
     </div>
  </div>
