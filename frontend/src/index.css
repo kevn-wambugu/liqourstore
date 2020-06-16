@@ -248,7 +248,7 @@ a:hover{
   transform: translateX(-30rem);
   position: absolute;
   background-color: #203040;
-  height:100%;
+  height:120%;
   width: 30rem;
 }
 .sidebar.open {
