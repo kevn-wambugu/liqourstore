@@ -151,7 +151,7 @@ function App() {
 			<div class="footer-right">
 				<p class="footer-company-about">
 					<span>About us</span>
-					Alchemist Liqours Bring ease and convenience of buying and ordering alcohol delivery Thika. Whether you are looking for whisky or wine we got you covered. Your favorite drink is a dial away, Dial a drink Kenya and enjoy.</p>
+					Alchemis Liqours Bring ease and convenience of buying and ordering alcohol delivery Thika. Whether you are looking for whisky or wine we got you covered. Your favorite drink is a dial away, Dial a drink and enjoy.</p>
 				<div class="footer-icons">
         <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/alchemisliqours/?hl=en"><i className="fab fa-instagram "></i></a>
