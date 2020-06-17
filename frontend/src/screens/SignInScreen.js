@@ -60,7 +60,7 @@ function SigninScreen(props) {
           New to Alchemis Liqours?
         </li>
         <li>
-          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create your Alchemist account</Link>
+          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create your Alchemis account</Link>
         </li>
       </ul>
     </form>

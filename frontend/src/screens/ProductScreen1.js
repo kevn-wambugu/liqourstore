@@ -63,7 +63,7 @@ function ProductScreen(props) {
             <div className="details-action">
               <ul>
                 <li>
-                  Price:KSh {product.price}
+                  Price:KSH {product.price}
                 </li>
                 <li>
                   Status: {product.countInStock > 0 ? "In Stock" : "Unavailable."}
