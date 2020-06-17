@@ -500,7 +500,24 @@ a:hover{
   font-size: 1.5rem;
   font-weight: 100;
 }
+@media (max-width: 880px) {
 
+	.products li{
+	align-self: flex-start;
+  flex-direction:column;
+  padding: 0;
+  flex: 1 1 30rem;
+  margin: .1rem;
+  max-width: 40%;
+  display:block;
+  height: 100%;
+	}
+
+	.products li{
+		margin-left: 0;
+	}
+
+}
 /* details */
 .details{
   display: flex;
