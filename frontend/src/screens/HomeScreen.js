@@ -47,9 +47,13 @@ function HomeScreen(props) {
           <option value="highest">Highest</option>
         </select>
       </li>
-  
-    </ul>
-			
+      </ul>
+      <ul>
+
+      <div className="message">
+        <h1>Pick, Order & We will Deliver!</h1>
+      </div>
+      </ul>		
     {loading ? <div>Loading...</div> :
       error ? <div>{error}</div> :
         <ul className="products">

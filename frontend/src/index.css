@@ -487,8 +487,8 @@ a:hover{
 .product-price{
   font-family: 'Quicksand', sans-serif;
   color: #333835;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 .product-image
   { max-width: 70%; height: auto; }
@@ -498,7 +498,7 @@ a:hover{
 .product-buy{
   color: #414442;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: bold;
 }
 @media (max-width: 880px) {
 
@@ -518,6 +518,17 @@ a:hover{
 	}
 
 }
+.icon
+  {
+     max-width: 7%; height:auto; }
+
+.message{
+      font-family: 'Quicksand', sans-serif;
+      color: #414442;
+      font-size: 12px;
+      font-weight :200;
+    }
+
 /* details */
 .details{
   display: flex;
