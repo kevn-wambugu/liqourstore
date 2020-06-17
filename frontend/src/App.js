@@ -43,7 +43,7 @@ function App() {
       <div className="brand">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
         <button type="button" onClick={openSidebar}>&#9776;</button>
-        <a href="/">Alchemis Liqours<i className="fas fa-glass-whiskey"></i></a>
+        <a href="/">Alchemis Liqours<i className="fas fa-glass-cheers"></i></a>
       </div>
       <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
@@ -119,7 +119,7 @@ function App() {
     <footer class="footer-distributed">
  
 			<div class="footer-left">
-				<h3><span>Alchemis Liqours<i class="fa fa-glass-whiskey"></i></span></h3>
+				<h3><span>Alchemis Liqours<i class="fa fa-glass-whiskey-cheers"></i></span></h3>
  
 				<p class="footer-links">
 					<a href="/">Home</a>
