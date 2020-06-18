@@ -128,12 +128,14 @@ td{
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  height:120%;
 }
 .brand a{ 
   color: #ffffff;
   font-family: 'Shadows Into Light', cursive;
   font-size: 3rem;
   font-weight: 400;
+  
   text-decoration: none;
 }
 .brand button{
@@ -476,7 +478,7 @@ a:hover{
 
 .product-name{
   font-family: 'Quicksand', sans-serif;
-  color: #2b48a8;
+  color: #33383b;
   font-size: 18px;
   font-weight :300;
 }
@@ -528,7 +530,7 @@ a:hover{
       font-size: 12px;
       font-weight :200;
     }
-
+    
 /* details */
 .details{
   display: flex;
@@ -832,11 +834,12 @@ tbody>tr:nth-child(odd){
 .filter{
   display: flex;
   list-style-type: none;
-  padding: 0;
+  padding: 2rem;
   margin: 1rem auto;
   max-width: 45rem;
   justify-content: space-between;
   align-items: center;
+
 }
 .filter input,
 .filter button,

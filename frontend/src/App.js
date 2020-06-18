@@ -41,9 +41,9 @@ function App() {
     <div className="grid-container">
     <header className="header">
       <div className="brand">
-        <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"></link>
+        <link href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" rel="stylesheet"></link>
         <button type="button" onClick={openSidebar}>&#9776;</button>
-        <a href="/">Alchemis Liqours</a>
+        <a href="/">Alchemis Liqours <i className="fas fa-wine-glass-alt"  style={{color:"light-blue"}} ></i></a>
       </div>
       <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
