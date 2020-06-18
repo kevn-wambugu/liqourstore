@@ -128,7 +128,7 @@ td{
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  height:120%;
+  
 }
 .brand a{ 
   color: #ffffff;
@@ -478,7 +478,7 @@ a:hover{
 
 .product-name{
   font-family: 'Quicksand', sans-serif;
-  color: #33383b;
+  color: #0066c0;
   font-size: 18px;
   font-weight :300;
 }
@@ -834,7 +834,7 @@ tbody>tr:nth-child(odd){
 .filter{
   display: flex;
   list-style-type: none;
-  padding: 2rem;
+  padding: 0;
   margin: 1rem auto;
   max-width: 45rem;
   justify-content: space-between;
