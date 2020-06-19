@@ -119,7 +119,7 @@ function App() {
     <footer class="footer-distributed">
  
 			<div class="footer-left">
-				<h3><span>Alchemis Liqours<img className="icon" src="alcohol.ico" /></span></h3>
+				<h3><span>Alchemis Liqours<i className="fas fa-wine-glass-alt"  style={{color:"light-blue"}} ></i></span></h3>
  
 				<p class="footer-links">
 					<a href="/">Home</a>

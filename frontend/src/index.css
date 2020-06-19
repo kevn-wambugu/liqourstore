@@ -177,16 +177,15 @@ td{
 }
 
 
+.main {
+  grid-area: main;
+}
 .content-margined{
   margin: 1rem;
 }
 .content > h1 {
   margin-left: 2rem;
 }
-p {
-  font-family: 'Fira Sans', sans-serif;
-}
-
 footer{
 	font-family: 'Quicksand', sans-serif;
   display: inline-table;
@@ -532,35 +531,51 @@ a:hover{
     }
     
 /* details */
+.products-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1rem;
+}
 .details{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: .2rem;
+  padding: 0;
 }
-.details-image 
-  { max-width: 100%; height: auto; }
-
-.details-image img{
-  max-width: 50rem;
+.details-image > img {
+  max-width: 55rem;
   width: 100%;
 }
+
+.details-image {
+    max-width: 100%;
+    height: auto;
+  }
 .details-info {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   font-size:large;
-  flex: 1 1 30rem;
+  padding: 1rem;
+  margin: 1rem;
+  flex: 1 1 38rem;
+}
+.details-info h3 {
+  margin-bottom: 0;
 }
 .details-action {
   font-family: 'Inconsolata', monospace;
   font-weight: 500;
   font-size:large;
   flex: 1 1 30rem;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
 }
 .details-info ul, .details-action ul{
   list-style-type: none;
-  padding: 0;
+  padding: 1rem;
 }
 .details-info li, .details-action li{
   margin-bottom: 1rem;
@@ -598,30 +613,39 @@ a:hover{
 .text-center{
   text-align: center;
 }
-#share-buttons img {
-  
-  justify-content:space-evenly;
-  padding: 5px;
-  border: 0;
-  box-shadow: 0;
-  display: inline;
-  }
-  .fa-star {
-    color: #FF6F00;
-    cursor: pointer
+.review{
+  list-style-type: none;
+  padding: 0;
+}
+.review li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-.fa-star-o {
-    color: #FF6F00;
-    cursor: pointer
+/* Rating */
+.rating-container {
+  display: flex;
+  align-items: center;
 }
-.comment-form>p {
-    display: block;
-    float: left;
-    width: 100%;
-    margin: 0 0 16px;
-    padding: 0;
+.rating-container > div:last-child{
+  margin-top: .5rem;
+  margin-left: .5rem;
 }
+.rating{
+  margin: .5rem 0;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  font-size: 2.5rem;
+  color: #c0c0c0;
+  line-height: 2rem;
+}
+.rating > span.active:before{
+   content: "\2605";
+   position: absolute;
+   color:#F0C000
+} 
 
 /* Cart */
 
@@ -692,6 +716,7 @@ align-items: flex-end;
   border-radius: .5rem;
   list-style-type: none;
 }
+
 .form-container li{
   display: flex;
   flex-direction: column;
