@@ -154,10 +154,10 @@ td{
 
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 880px) {
 
-  .header-links a:not(:nth-child(3n - 5)):not(:nth-child(4n)) {display: none;}
-  
+  .header-links a:not(:nth-child(6n)):not(:last-child) {display: none;}
+  .header-link {display: none;}
   	
 }
 @media screen and (max-width: 880px) {
@@ -465,7 +465,7 @@ a:hover{
   align-self: flex-start;
   flex-direction: row;
   padding: 0;
-  flex: 1 1 38rem;
+  flex: 1 1 34rem;
   margin: .1rem;
   max-width: 100%;
   display:grid;
