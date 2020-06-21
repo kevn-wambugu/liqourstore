@@ -206,8 +206,21 @@ td{
 .content > h1 {
   margin-left: 2rem;
 }
-
-
+footer{
+  font-family: 'Quicksand', sans-serif;
+  display: inline-table;
+  width: 100%;
+  padding: 0;
+  border: 0.062em solid #151515;
+  grid-area: footer;
+  background-color: #0c1a1e;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;}
+  @media (max-height:800px){
+    footer { position: static; }
+    header { padding-top:40px; }
+  }
 .footer-distributed{
 	background-color: #203040;
 	box-sizing: border-box;
@@ -215,7 +228,7 @@ td{
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 50px 50px 60px 50px;
-	margin-top: 120px;
+	margin-top: 140px;
 }
 
 .footer-distributed .footer-left,
@@ -464,7 +477,7 @@ a:hover{
 .products li {
   align-self: flex-start;
   flex-direction: row;
-  padding: 8px;
+  padding: 10px;
   flex: 1 1 28rem;
   margin: .1rem;
   max-width: 100%;
