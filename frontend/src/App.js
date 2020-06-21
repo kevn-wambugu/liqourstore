@@ -54,9 +54,8 @@ function App() {
       
          <div className="header-links">
             <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
-            <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-facebook-f fa-2x"></i></a>
-            <a href="https://www.instagram.com/alchemisliqours/?hl=en"><i className="fab fa-instagram fa-2x"></i></a>
-            <a href="https://www.Twitter.com"><i className="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.facebook.com/AlchemisliqourDistributors/"><i className="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/Alchemisliqors/?hl=en"><i className="fab fa-instagram fa-2x"></i></a>
             <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
             {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
             {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
@@ -109,8 +108,7 @@ function App() {
         </aside>
         <main onClick={closeSidebar} className="main">
         <div className="content">
-      
-        
+          
             <Route path="/orders" component={OrdersScreen} />
             <Route path="/profile" component={ProfileScreen} />
             <Route path="/order/:id" component={OrderScreen} />
@@ -125,7 +123,8 @@ function App() {
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
 
-      </div>
+        </div>
+      
         
     </main>
     <footer class="footer-distributed">
@@ -165,7 +164,7 @@ function App() {
 					<span>About us</span>
 					Alchemis Liqours Bring ease and convenience of buying and ordering alcohol delivery Thika. Whether you are looking for whisky or wine we got you covered. Your favorite drink is a dial away, Dial a drink and enjoy.</p>
 				<div class="footer-icons">
-        <a href="https://www.facebook.com/AlchemistLiqours/"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/AlchemisliqourDistributors/"><i className="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/alchemisliqours/?hl=en"><i className="fab fa-instagram "></i></a>
         <a href="https://www.Twitter.com"><i className="fab fa-twitter "></i></a>
         <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp"></i></a>
