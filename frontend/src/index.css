@@ -233,7 +233,7 @@ aside {
   font-family: 'Quicksand', sans-serif;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 880px) {
   .aside{width: 0;height: 0px;}
   .aside a {display: none;}
   .aside-link{display: none;}
@@ -507,7 +507,7 @@ a:hover{
 .products li {
   align-self: flex-start;
   flex-direction: row;
-  padding: 10px;
+  padding: 5px;
   flex: 1 1 28rem;
   margin: .1rem;
   max-width: 100%;
