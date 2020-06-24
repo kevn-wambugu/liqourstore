@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/Productactions';
 import Rating from '../components/Rating';
@@ -117,6 +117,16 @@ function HomeScreen(props) {
             <h2>{<Link to="/brand/Sheridan's ">Sheridan's   </Link>}</h2>
             <h2>{<Link to="/brand/Pilsner ">Pilsner   </Link>}</h2>
             <h2>{<Link to="/brand/Tusker">Tusker  </Link>}</h2>
+
+            <h2>{<Link to="/brand/Atlas">Atlas</Link>}</h2>
+            <h2>{<Link to="/brand/Tuborg">Tuborg</Link>}</h2>
+            <h2>{<Link to="/brand/Guinness">Guinness</Link>}</h2>
+            <h2>{<Link to="/brand/Havana Club">Havana Club</Link>}</h2>
+            <h2>{<Link to="/brand/Tequila Rose ">Tequila Rose </Link>}</h2>
+            <h2>{<Link to="/brand/Veuve Clicquot">Veuve Clicquot</Link>}</h2>
+            <h2>{<Link to="/brand/Neon">Neon</Link>}</h2>
+            <h2>{<Link to="/brand/Baileys">Baileys </Link>}</h2>
+           
 
        </div>
       

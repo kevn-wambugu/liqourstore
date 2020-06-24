@@ -91,7 +91,7 @@ function App() {
             <h2>{<Link to="/category/BEER">BEER</Link>}</h2>
             <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
             <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
-            <h2>{<Link to="/category/WINES">RUM</Link>}</h2>
+            <h2>{<Link to="/category/RUM">RUM</Link>}</h2>
             <h2>{<Link to="/category/VODKA">VODKA</Link>}</h2>
             <h2>{<Link to="/category/WINE">WINE</Link>}</h2>
             <h2>{<Link to="/category/SPIRITS">SPIRITS</Link>}</h2>
