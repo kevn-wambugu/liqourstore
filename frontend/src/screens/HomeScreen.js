@@ -8,24 +8,25 @@ function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
   const [sortOrder, setSortOrder] = useState('');
   const category = props.match.params.id ? props.match.params.id : '';
+  const brand = props.match.params.id ? props.match.params.id : '';
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(listProducts(category));
+    dispatch(listProducts(category || brand));
 
     return () => {
       //
     };
-  }, [category]);
+  }, [category] || [brand]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(listProducts(category, searchKeyword, sortOrder))
+    dispatch(listProducts(brand,category, searchKeyword, sortOrder))
   }
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
-    dispatch(listProducts(category, searchKeyword, sortOrder))
+    dispatch(listProducts(brand,category, searchKeyword, sortOrder))
   }
 
   return <>
@@ -139,7 +140,7 @@ function HomeScreen(props) {
               <li key={product._id}>
                 <div className="product">
                   <Link to={'/product/' + product._id}>
-                    <img className="product-image" src={product.image} alt='/images/download1.png'/>
+                    <img className="product-image" src={product.image} alt={product.name}/>
                   </Link>
                   <div className="product-name">{product.name}
                   </div>
