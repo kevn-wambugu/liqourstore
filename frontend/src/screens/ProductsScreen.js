@@ -72,67 +72,87 @@ function ProductsScreen() {
   }, [successSave, successDelete]);
   return loading
     ? <LoadingBox /> : error ? <ErrorBox message={error} /> : (
-      <div className="content content-margined">
-        <div className="products-header">
+      <section className="ftco-section">
+      <div className="container">
+    <div className="row">
           <h3>Products</h3>
-          <button type="button" className="button primary" onClick={() => showModal({})}>
+          <button type="button" className="btn btn-primary py-3 px-4" onClick={() => showModal({})}>
             Create Product
           </button>
         </div>
 
         {modalVisible
           && (
-            <div className="modal">
+            <div className="container">
               <h3>Create Product</h3>
               {errorSave && <ErrorBox message={error} />}
               {loading && <LoadingBox />}
-              <form onSubmit={submitHandler}>
-                <ul className="form-container">
-                  <li>
+              <div className="row justify-content-center">
+             <div className="col-xl-10 ftco-animate-visible"> 
+              <form action="#" className="billing-form" onSubmit={submitHandler}>
+                 <h3 className="mb-4 billing-heading">Sign In</h3>
+                 <div className="row align-items-end">
+                 <div className="col-md-6">
+                  <div className="col-md-6">
+                 <div className="form-group">
                     <label htmlFor="name">
                       Name
                     </label>
-                    <input required name="name" id="name" value={name} onChange={(e) => { setName(e.target.value); }} />
-                  </li>
-                  <li>
+                    <input required name="name" id="name" className="form-control" value={name} onChange={(e) => { setName(e.target.value); }} />
+                 </div>
+                 </div>
+
+                 <div className="col-md-6">
+                  <div className="form-group">
                     <label htmlFor="brand">
                       Brand
                     </label>
-                    <input required name="brand" id="brand" value={brand} onChange={(e) => { setBrand(e.target.value); }} />
-                  </li>
-                  <li>
+                    <input required name="brand" id="brand" className="form-control" value={brand} onChange={(e) => { setBrand(e.target.value); }} />
+                  </div>
+                  </div>
+                  <div className="col-md-6">
+                  <div className="form-group">
                     <label htmlFor="image">
                       Image (680 X 830)
                     </label>
-                    <input required name="image" id="image" value={image} onChange={(e) => { setImage(e.target.value); }} />
+                    <input required name="image" id="image" className="form-control" value={image} onChange={(e) => { setImage(e.target.value); }} />
                     <input type="file" name="imageFile" onChange={uploadImageFile} />
-                  </li>
-                  <li>
+                  </div>
+                  </div>
+                  <div className="col-md-6">
+                  <div className="form-group">
                     <label htmlFor="name">
                       Price
                     </label>
-                    <input required type="number" name="price" id="price" value={price} onChange={(e) => { setPrice(e.target.value); }} />
-                  </li>
-                  <li>
+                    <input required type="number" name="price"  className="form-control" id="price" value={price} onChange={(e) => { setPrice(e.target.value); }} />
+                  </div>
+                  </div>
+                  <div className="col-md-6">
+                  <div className="form-group"></div>
                     <label htmlFor="category">
                       Category
                     </label>
-                    <input required name="category" id="category" value={category} onChange={(e) => { setCategory(e.target.value); }} />
-                  </li>
-                  <li>
+                    <input required name="category" id="category" className="form-control" value={category} onChange={(e) => { setCategory(e.target.value); }} />
+                  </div>
+                  </div>
+                  <div className="col-md-6">
+                 <div className="form-group"></div>
                     <label htmlFor="countInStock">
                       Count In Stock
                     </label>
-                    <input required type="number" name="countInStock" id="countInStock" value={countInStock} onChange={(e) => { setCountInStock(e.target.value); }} />
-                  </li>
-                  <li>
+                    <input required type="number" name="countInStock" className="form-control" id="countInStock" value={countInStock} onChange={(e) => { setCountInStock(e.target.value); }} />
+                  </div>
+                  </div>
+                  <div className="col-md-6">
+                  <div className="form-group">
                     <label htmlFor="description">
                       Description
                     </label>
-                    <textarea required name="description" id="description" value={description} onChange={(e) => { setDescription(e.target.value); }} />
-                  </li>
+                    <textarea required name="description" id="description" className="form-control" value={description} onChange={(e) => { setDescription(e.target.value); }} />
+                  </div>
+                  </div>
                   <li>
-                    <button type="submit" className="button primary">
+                    <button type="submit" className="btn btn-primary py-3 px-4">
                       {id ? 'Update' : 'Create'}
                       {' '}
                       Product
@@ -141,9 +161,15 @@ function ProductsScreen() {
                   <li>
                     <button type="button" onClick={() => { setModalVisible(false); }} className="button">Back</button>
                   </li>
-                </ul>
-              </form>
-            </div>
+
+                  </form>
+                </div>
+                </div>
+                </div>
+               
+            
+          
+            
           )}
         {products.length === 0 ? (
           <div className="empty-list">
@@ -197,6 +223,7 @@ function ProductsScreen() {
             </table>
           )}
       </div>
+      </section>
     );
 }
 export default ProductsScreen;

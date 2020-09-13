@@ -25,73 +25,95 @@ function CartScreen(props) {
   const removeFromCartHandler = (productId) => {
     dispatch(removeFromCart(productId));
   };
-  return (
-    <div className="cart">
-      <div className="cart-list">
-        <ul className="cart-list-container">
-          <li>
-            <div>
-              <h2>Shopping Cart</h2>
-            </div>
-            <div>Price</div>
-          </li>
-          {cartItems.length === 0 && (
-            <div>
-              Cart is empty!
-              {' '}
-              <Link to="/">Go shopping</Link>
-              {' '}
-            </div>
-          )}
-          {cartItems.map((item) => (
-            <li key={item.product}>
-              <div className="cart-image">
-                <img src={item.image} alt="product" />
-              </div>
-              <div className="cart-name">
-                <div>
-                  <Link href={`/product/${item.product}`}>{item.name}</Link>
-                </div>
-                <div className="cart-list-actions">
-                  Qty:
-                  <select
-                    value={item.qty}
-                    onChange={(e) => addToCartHandler(item.product, e.target.value)}
-                  >
-                    {[...Array(item.countInStock).keys()]
-                      .map((x) => <option key={x + 1} value={x + 1}>{x + 1}</option>)}
-                  </select>
-                  {' '}
-                  <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)}>Delete</button>
+  return<section className="ftco-section">
+  <div className="container">
+    <div className="row">
+      <div className="table-wrap" />
+         <table className="table" >
+          <thead className="thead-primary">
+            <tr>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>total</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            
 
+          {cartItems.map((item) => (
+            <tr className="alert" role="alert" key={item.product}>
+              <td>
+                <label className="checkbox-wrap checkbox-primary">
+                  <input type="checkbox" />
+                  <span className="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div className="img" style={{ backgroundImage: `url(${item.image}`}}></div>
+              </td>
+              <td>
+                <div className="email">
+                  <span>{item.name}</span>
+                  <span>{item.description}</span>
                 </div>
-              </div>
-              <div className="cart-price">
-                KSH
-                {item.price}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="cart-checkout">
-        <h3>
-          Subtotal (
-          {cartItems.reduce((a, c) => a + c.qty, 0)}
-          {' '}
-          items): KSH
-          {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
-        </h3>
-        <button
-          type="button"
-          disabled={cartItems.length === 0}
-          onClick={proccedToCheckout}
-          className="button primary"
-        >
-          Proceed to checkout
-        </button>
+              </td>
+          <td>KSH {item.price}</td>
+              <td className="quantity">
+                <div className="input-group">
+                   <input type="text" name="quantity" className="quantity form-control input-number" value={item.qty} onChange={(e) => addToCartHandler(item.product, e.target.value)} min="1" max="100" />
+                </div>
+              </td>
+          <td>{item.price * item.qty}</td>
+              <td>
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close" onClick={() => removeFromCartHandler(item.product)}>
+                  <span aria-hidden="true"><i className="fa fa-close"></i></span>
+                </button>
+              </td>
+            </tr>))}
+
+           
+
+            
+          </tbody>
+        </table>
       </div>
     </div>
-  );
+    <div className="row justify-content-end">
+      <div className="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate-visible">
+        <div className="cart-total mb-3">
+          <h3>Cart Totals</h3>
+          <p className="d-flex">
+            <span>Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)})</span>
+            <span>KSH {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
+          </p>
+          <p className="d-flex">
+            <span>Delivery</span>
+            <span>KSH 0.00</span>
+          </p>
+          <p className="d-flex">
+            <span>Discount</span>
+            <span>KSH 0</span>
+          </p>
+         
+          <p className="d-flex total-price">
+            <span>Total</span>
+            <span>KSH {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
+          </p>
+
+         <p> <a href='/'><button type="submit" className="btn btn-primary py-3 px-4">Continue Shopping</button></a></p>
+        
+      <p ><button type="submit" className="btn btn-primary py-3 px-4" 
+      type="button"
+      disabled={cartItems.length === 0}
+      onClick={proccedToCheckout}
+      >Checkout</button></p>
+      </div>
+     </div>
+  </div>
+</section>
 }
 export default CartScreen;

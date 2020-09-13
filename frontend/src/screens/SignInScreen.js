@@ -16,7 +16,7 @@ function SigninScreen(props) {
       props.history.push(redirect);
     }
     return () => {
-      //
+      // 
     };
   }, [userInfo]);
 
@@ -25,45 +25,51 @@ function SigninScreen(props) {
     dispatch(signin(email, password));
 
   }
-  return <div className="form">
-    <form onSubmit={submitHandler} >
-      <ul className="form-container">
-        <li>
-          <h2>Sign-In</h2>
-        </li>
-        <li>
-          {loading && <div>Loading...</div>}
-          {error && <div>{error}</div>}
-        </li>
-        <li>
-          <label htmlFor="email">
-            Email
-          </label>
-          <input type="email" name="email" id="email" 
-          required
+  return  <section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-10 ftco-animate-visible">
+        <form action="#" class="billing-form" onSubmit={submitHandler} >
+          <h3 class="mb-4 billing-heading">Sign In</h3>
+          <div class="row align-items-end">
+            
+           
+            
+          <div class="col-md-6">
+              <div class="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="text" class="form-control" placeholder="" required
           value={email}
-          onChange={(e) => setEmail(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" 
-          required
+          onChange={(e) => setEmail(e.target.value)} />
+              </div>
+            </div>
+
+
+            
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lastname">password</label>
+                <input type="password" class="form-control" placeholder="" required
           value={password}
-          onChange={(e) => setPassword(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <button type="submit" className="button primary">Signin</button>
-        </li>
-        <li>
-          New to Alchemis Liqours?
-        </li>
-        <li>
-          <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button secondary text-center" >Create your Alchemis account</Link>
-        </li>
-      </ul>
-    </form>
-  </div>
+          onChange={(e) => setPassword(e.target.value)} />
+              </div>
+            </div>
+
+
+            <div class="w-100"></div>
+            <p><button type='submit' class="btn btn-primary py-3 px-4" onClick={submitHandler}>Sign In</button></p>
+            <div class="col-md-12">
+            <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect}  className="mb-0" className="mr-2">Create your Alchemis account</Link>
+            </div>
+          </div>
+        </form>
+
+
+
+          
+        </div>
+      </div> 
+    </div>
+</section>
 }
 export default SigninScreen;

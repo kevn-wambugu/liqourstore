@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
+import ContactScreen from './screens/contactScreen';
+import AboutScreen from './screens/aboutScreen';
+import ScriptTag from 'react-script-tag';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen1';
 import OrdersScreen from './screens/OrdersScreen';
+
 import CartScreen from './screens/CartScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SigninScreen from './screens/SignInScreen';
@@ -12,8 +16,7 @@ import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import { listProductCategories } from './actions/Productactions';
-import LoadingBox from './components/LoadingBox';
-import ErrorBox from './components/ErrorBox';
+
 import ProductsScreen from './screens/ProductsScreen';
 import OrderScreen from './screens/OrderScreen';
 
@@ -33,82 +36,94 @@ function App() {
       //
     };
   }, []);
-  const openSidebar = () => document.querySelector('.sidebar').classList.add('open');
-  const closeSidebar = () => document.querySelector('.sidebar').classList.remove('open');
+ 
 
   return (
   <BrowserRouter>
-    <div className="grid-container">
-    <header className="header">
-      <div className="brand">
-        <link href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" rel="stylesheet"></link>
-        <button type="button" onClick={openSidebar}>&#9776;</button>
-        <a href="/">Alchemis Liqours <i className="fas fa-wine-glass-alt"  style={{color:"light-blue"}} ></i></a>
-      </div>
-      <div className="header-link">
-         <h1>Drinks delivered in 20-50min within Thika.</h1>
-         </div>
-         <div className="header-link">
-         <i class="fa fa-phone fa-2x" style={{color:"white"}}>+254 725783259</i>
-         </div>
-      
-         <div className="header-links">
-            <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"></link>
-            <a href="https://www.facebook.com/AlchemisliqourDistributors/"><i className="fab fa-facebook-f fa-2x"></i></a>
-            <a href="https://www.instagram.com/Alchemisliqours/?hl=en"><i className="fab fa-instagram fa-2x"></i></a>
-            <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp fa-2x"></i></a>
-            {<Link to="/cart/:id?"><i className="fas fa-cart-arrow-down fa-2x"></i></Link>}
-            {cartItems.length !== 0 && <div className="badge">{cartItems.length}</div>}
-        {
-              userInfo ? <Link to="/profile">{userInfo.name}</Link> :
-                <Link to="/signin">Sign In</Link>
-            }
-            {userInfo && userInfo.isAdmin && (
-              <div className="dropdown">
-                <a href="#"  >Admin</a>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/orders">Orders</Link>
-                    <Link  to="/products">Products</Link>
-                  </li>
-                </ul>
-              </div>
+    <div className="wrap">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-6 d-flex align-items-center">
+						<p className="mb-0 phone pl-md-2">
+							<a href="#" className="mr-2"><span className="fa fa-phone mr-1"></span>+254 725783259</a> 
+							<a href="#"><span className="fa fa-paper-plane mr-1"></span> mikethealchemis@yahoo.com</a>
+						</p>
+					</div>
+					<div className="col-md-6 d-flex justify-content-md-end">
+						<div className="social-media mr-4">
+			    		<p className="mb-0 d-flex">
+			    			<a href="https://www.facebook.com/AlchemisliqourDistributors/" className="d-flex align-items-center justify-content-center"><span className="fa fa-facebook"><i className="sr-only">Facebook</i></span></a>
+			    			<a href="https://www.twitter.com/" className="d-flex align-items-center justify-content-center"><span className="fa fa-twitter"><i className="sr-only">Twitter</i></span></a>
+			    			<a href="https://www.instagram.com/Alchemisliqours/?hl=en" className="d-flex align-items-center justify-content-center"><span className="fa fa-instagram"><i className="sr-only">Instagram</i></span></a>
+			    			<a href="https://wa.me/254725783259" className="d-flex align-items-center justify-content-center"><span className="fa fa-whatsapp"><i className="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+		        <div className="reg">
+              {
+            userInfo ? <p><a href="/profile" className="mb-0" className="mr-2">{userInfo.name}</a></p> :
+		        	<p className="mb-0"><a href="/signin" className="mr-2">Sign Up</a> </p>
+}
+
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+	  <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div className="container">
+	      <a className="navbar-brand" href="/">Alchemis <span>Liqours</span></a>
+	      <div className="order-lg-last btn-group">
+          <a href="/cart/:id?" className="btn-cart dropdown-toggle dropdown-toggle-split" >
+          	<span className="flaticon-shopping-bag"></span>
+          	{cartItems.length !== 0 &&<div className="d-flex justify-content-center align-items-center"><small>{cartItems.length}</small></div>}
+          </a>
+          </div>
+
+	      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span className="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div className="collapse navbar-collapse" id="ftco-nav">
+	        <ul className="navbar-nav ml-auto">
+	          <li className="nav-item active"><a href="/" className="nav-link">Home</a></li>
+	          <li className="nav-item"><a href="/about" className="nav-link">About</a></li>
+	          {userInfo && userInfo.isAdmin && (
+                <li className="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                <div className="dropdown-menu" aria-labelledby="dropdown04">
+                
+                <a className="dropdown-item" href="/orders">Orders</a>
+                <a className="dropdown-item" href="/products">Products</a>
+                  
+                </div>
+              </li>
             )}
-      </div>
-      
-    </header>
-        <aside className="sidebar">
-          <ul className="categories">
-            <li>
-            <div className="category-links">
-              <h1>SHOP BY CATEGORY</h1>
-            </div> 
-              <button type="button" className="sidebar-menu-close" onClick={closeSidebar}>
-                X
-              </button>
-            </li>
-            <div className="category-links">
-            <h2>{<Link to="/category/BEER">BEER</Link>}</h2>
-            <h2>{<Link to="/category/WHISKEY">WHISKEY</Link>}</h2>
-            <h2>{<Link to="/category/BRANDY">BRANDY</Link>}</h2>
-            <h2>{<Link to="/category/RUM">RUM</Link>}</h2>
-            <h2>{<Link to="/category/VODKA">VODKA</Link>}</h2>
-            <h2>{<Link to="/category/WINE">WINE</Link>}</h2>
-            <h2>{<Link to="/category/SPIRITS">SPIRITS</Link>}</h2>
-            <h2>{<Link to="/category/COGNAC">COGNAC</Link>}</h2>
-            <h2>{<Link to="/category/CHAMPAGNE">CHAMPAGNE</Link>}</h2>
-            <h2>{<Link to="/category/GIN">GIN</Link>}</h2>
-            <h2>{<Link to="/category/CREAMS">CREAMS</Link>}</h2>
-            <h2>{<Link to="/category/ROLLING PAPERS">ROLLING PAPERS</Link>}</h2>
-            <h2>{<Link to="/category/SHOOTERS">SHOOTERS</Link>}</h2>
-            <h2>{<Link to="/category/Extras">EXTRAS</Link>}</h2>
-            <h2>{<Link to="/category/ENERGY DRINKS">ENERGY DRINKS</Link>}</h2>
+	          
+	          <li className="nav-item"><a href="/contact" className="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+   
+    
+    <div className="hero-wrap" style={{ backgroundImage: `url(${require('./images/bg_2.jpg')}`}} data-stellar-background-ratio="0.5">
+      <div className="overlay"></div>
+      <div className="container">
+        <div className="row no-gutters slider-text align-items-center justify-content-center">
+          <div className="col-md-8 ftco-animate-visible-visible d-flex align-items-end">
+          	<div className="text w-100 text-center">
+	            <h1 className="mb-4">Good <span>Drink</span> for Good <span>Moments</span>.</h1>
+	            <p><a href="#" className="btn btn-primary py-2 px-4">Shop Now</a> <a href="/" className="btn btn-white btn-outline-white py-2 px-4">Read more</a></p>
             </div>
-          </ul>
-        </aside>
-        <main onClick={closeSidebar} className="main">
-        <div className="content">
-          
+          </div>
+        </div>
+      </div>
+    </div>
+    <section className="ftco-section">
+        
+           <Route path="/about" component={AboutScreen} />
+            <Route path="/contact" component={ContactScreen} />
             <Route path="/orders" component={OrdersScreen} />
             <Route path="/profile" component={ProfileScreen} />
             <Route path="/order/:id" component={OrderScreen} />
@@ -122,56 +137,86 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+    </section>
 
+
+    <footer className="ftco-footer">
+      <div className="container">
+        <div className="row mb-5">
+          <div className="col-sm-12 col-md">
+            <div className="ftco-footer-widget mb-4">
+              <h2 className="ftco-heading-2 logo"><a href="#">Liquor <span>Store</span></a></h2>
+              <p>Good Drink for Good Moments</p>
+              <ul className="ftco-footer-social list-unstyled mt-2">
+                <li className="ftco-animate-visible"><a href="https://www.twitter.com/"><span className="fa fa-twitter"></span></a></li>
+                <li className="ftco-animate-visible"><a href="https://www.facebook.com/AlchemisliqourDistributors/"><span className="fa fa-facebook"></span></a></li>
+                <li className="ftco-animate-visible"><a href="https://www.instagram.com/Alchemisliqours/?hl=en"><span className="fa fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md">
+            <div className="ftco-footer-widget mb-4 ml-md-4">
+              <h2 className="ftco-heading-2">My Accounts</h2>
+              <ul className="list-unstyled">
+                <li><a href="/signin"><span className="fa fa-chevron-right mr-2"></span>My Account</a></li>
+                <li><a href="/register"><span className="fa fa-chevron-right mr-2"></span>Register</a></li>
+                <li><a href="/signin"><span className="fa fa-chevron-right mr-2"></span>Log In</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>My Order</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md">
+            <div className="ftco-footer-widget mb-4 ml-md-4">
+              <h2 className="ftco-heading-2">Information</h2>
+              <ul className="list-unstyled">
+                <li><a href="/about"><span className="fa fa-chevron-right mr-2"></span>About us</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>Catalog</a></li>
+                <li><a href="/contact"><span className="fa fa-chevron-right mr-2"></span>Contact us</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md">
+             <div className="ftco-footer-widget mb-4">
+              <h2 className="ftco-heading-2">Quick Link</h2>
+              <ul className="list-unstyled">
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>New User</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>Help Center</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>Report Spam</a></li>
+                <li><a href="#"><span className="fa fa-chevron-right mr-2"></span>Faq's</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md">
+            <div className="ftco-footer-widget mb-4">
+            	<h2 className="ftco-heading-2">Have a Questions?</h2>
+            	<div className="block-23 mb-3">
+	              <ul>
+	                <li><span className="icon fa fa-map marker"></span><span className="text">Thika ,Gatitu</span></li>
+	                <li><a href="#"><span className="icon fa fa-phone"></span><span className="text">+254 725783259</span></a></li>
+	                <li><a href="mailto:mikethealchemis@yahoo.com"><span className="icon fa fa-paper-plane pr-4"></span><span className="text">mikethealchemis@yahoo.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
         </div>
-      
-        
-    </main>
-    <footer class="footer-distributed">
+      </div>
+      <div className="container-fluid px-0 py-5 bg-black">
+      	<div className="container">
+      		<div className="row">
+	          <div className="col-md-12">
+            <p className="mb-0" style={{color:" rgba(255,255,255,.5)"}}>
+	  All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a></p>
  
-			<div class="footer-left">
-				<h3><span>Alchemis Liqours<i className="fas fa-wine-glass-alt"  style={{color:"light-blue"}} ></i></span></h3>
+		
+	    
+	          </div>
+	        </div>
+      	</div>
+      </div>
+    </footer>
+    
  
-				<p class="footer-links">
-					<a href="/">Home</a>
-					|
-					<a href="/">About</a>
-					|
-					<a href="/">Contact</a>
-				</p>
- 
-				<p class="footer-company-name">©2020 Alchemis Liqours.</p>
-			</div>
- 
-			<div class="footer-center">
-				<div>
-					<i class="fa fa-map-marker"></i>
-					  <p><span><a href="https://goo.gl/maps/1CVe4wYH9grh6hUf6">GET DIRECTIONS</a></span>
-            </p>
-				</div>
- 
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>+254 725783259</p>
-				</div>
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:mikethealchemis@yahoo.com">mikethealchemis@yahoo.com</a></p>
-				</div>
-		   	</div>
-			<div class="footer-right">
-				<p class="footer-company-about">
-					<span>About us</span>
-					Alchemis Liqours Bring ease and convenience of buying and ordering alcohol delivery Thika. Whether you are looking for whisky or wine we got you covered. Your favorite drink is a dial away, Dial a drink and enjoy.</p>
-				<div class="footer-icons">
-        <a href="https://www.facebook.com/AlchemisliqourDistributors/"><i className="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/Alchemisliqours/?hl=en"><i className="fab fa-instagram "></i></a>
-        <a href="https://www.Twitter.com"><i className="fab fa-twitter "></i></a>
-        <a href="https://wa.me/254725783259"><i className="fab fa-whatsapp"></i></a>
-				</div>
-			</div>
-		</footer>
- </div>
  
 </BrowserRouter>
   );

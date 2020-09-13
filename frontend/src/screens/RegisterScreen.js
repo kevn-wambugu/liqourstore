@@ -27,63 +27,70 @@ function RegisterScreen(props) {
     e.preventDefault();
     dispatch(register(name, email, password));
   }
-  return <div className="form">
-    <form onSubmit={submitHandler} >
-      <ul className="form-container">
-        <li>
-          <h2>Create Account</h2>
-        </li>
-        <li>
-          {loading && <div>Loading...</div>}
-          {error && <div>{error}</div>}
-        </li>
-        <li>
-          <label htmlFor="name">
-            Name
-          </label>
-          <input type="name" name="name" id="name" 
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <label htmlFor="email">
-            Email
-          </label>
-          <input type="email" name="email" id="email" 
-          required
+  return  <section className="ftco-section">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-xl-10 ftco-animate-visible">
+        <form action="#" className="billing-form" onSubmit={submitHandler}>
+          <h3 className="mb-4 billing-heading">Sign In</h3>
+          <div className="row align-items-end">
+           <div className="col-md-6">
+	                <div className="form-group">
+	                	<label for="firstname">Name</label>
+                    <input type="text" className="form-control" placeholder=""
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    
+                    />
+	                </div>
+	              </div>
+            
+           
+            
+            <div className="col-md-6">
+              <div className="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="text" className="form-control" placeholder="" required
           value={email}
-          onChange={(e) => setEmail(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password"
-          required
+          onChange={(e) => setEmail(e.target.value)} />
+              </div>
+            </div>
+
+            <div className="col-md-6">
+              <div className="form-group">
+                <label for="lastname">password</label>
+                <input type="password" className="form-control" placeholder="" required
           value={password}
-          onChange={(e) => setPassword(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <label htmlFor="rePassword">Re-Enter Password</label>
-          <input type="password" id="rePassword" name="rePassword"
-          required
+          onChange={(e) => setPassword(e.target.value)} />
+              </div>
+            </div>
+
+            <div className="col-md-6">
+              <div className="form-group">
+                <label for="lastname">Re-enter Password</label>
+                <input type="password" className="form-control" placeholder=""  required
           value={rePassword}
-          onChange={(e) => setRePassword(e.target.value)}>
-          </input>
-        </li>
-        <li>
-          <button type="submit" className="button primary">Register</button>
-        </li>
-        <li>
-          Already have an account?
-          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your Alchemis account</Link>
+          onChange={(e) => setRePassword(e.target.value)} />
+              </div>
+            </div>
+            
 
-        </li>
 
-      </ul>
-    </form>
-  </div>
+            <div className="w-100"></div>
+            <div className="col-md-12">
+            <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect}  className="mb-0" className="mr-2">Sign In</Link>
+            </div>
+          </div>
+          <p><button type='submit' className="btn btn-primary py-3 px-4">Register</button></p>
+        </form>
+
+
+
+          
+        </div>
+      </div> 
+    </div>
+</section>
 }
 export default RegisterScreen;

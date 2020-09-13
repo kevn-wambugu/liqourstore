@@ -8,6 +8,8 @@ import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import config from './config';
+import more from './routes/more'
+import mpesaroute from './routes/mpesaroute'
 
 dotenv.config();
 
@@ -37,7 +39,8 @@ app.use(bodyParser.json());
 app.use('/api/products', productRoute);
 app.use('/api/users', userRoute);
 app.use('/api/orders', orderRoute);
-
+app.use('/api/contact', more);
+app.use('/api/about', more);
 app.get('/api/config/paypal', (req, res) => {
   res.send(config.PAYPAL_CLIENT_ID);
 });

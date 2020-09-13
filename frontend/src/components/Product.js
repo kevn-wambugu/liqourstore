@@ -4,7 +4,7 @@ import Rating from './Rating';
 
 const Product = (props) => (
   <li>
-    <div className="product">
+    <div className="products">
       <div className="product-image">
         <Link to={`/product/${props._id}`}>
           <img src={props.image} alt="images" />
@@ -17,18 +17,20 @@ const Product = (props) => (
           {props.name}
         </Link>
       </div>
-      <div className="product-brand">{props.brand}</div>
       <div className="product-price">
-        $
+        KSH
         {props.price}
       </div>
       <div className="product-rating">
-        <Rating value={props.rating} />
+        <Rating value={product.rating} />
         (
-        {props.numReviews}
+        {product.numReviews}
         {' '}
-Reviews)
+        Reviews)
 
+      </div>
+      <div className="product-buy">
+        <Link to={'/product/' + props._id}>BUY NOW <i className="fas fa-cart-arrow-down fa-2x"></i></Link>
       </div>
     </div>
   </li>

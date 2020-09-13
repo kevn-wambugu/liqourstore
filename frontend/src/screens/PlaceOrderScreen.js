@@ -42,104 +42,91 @@ function PlaceOrderScreen(props) {
     };
   }, [success]);
 
-  return <div>
+  return  <section className="ftco-section">
     <CheckoutSteps step1 step2 step3 step4 ></CheckoutSteps>
-    <div className="placeorder">
-      <div className="placeorder-info">
-        <div>
-          <h3>
-            Shipping
-          </h3>
-          <div>
-            {cart.shipping.mobnumber}
-            , 
-            {' '}
-            {shipping.city}
-              ,
-              {' '}
-              {shipping.country}
-              ,
-              {' '}
-              {shipping.postalCode}
-          </div>
-        </div>
-        <div>
-          <h3>Payment</h3>
-          <div>
-            Payment Method: {cart.payment.paymentMethod}
-          </div>
-        </div>
-        <div>
-          <ul className="cart-list-container">
-            <li>
-              <h3>
-                Shopping Cart
-          </h3>
-              <div>
-                Price
-          </div>
-            </li>
-            {
-              cartItems.length === 0 ?
-                <div>
-                  Cart is empty
-          </div>
-                :
-                cartItems.map(item =>
-                  <li>
-                    <div className="cart-image">
-                      <img src={item.image} alt="product" />
-                    </div>
-                    <div className="cart-name">
-                      <div>
-                        <Link to={"/product/" + item.product}>
-                          {item.name}
-                        </Link>
-
-                      </div>
-                      <div>
-                        Qty: {item.qty}
-                      </div>
-                    </div>
-                    <div className="cart-price">
-                      KSH{item.price}
-                    </div>
-                  </li>
-                )
-            }
-          </ul>
-        </div>
-
-      
+  <div className="container">
+    <div className="row">
+      <div className="table-wrap" />
+         <table className="table" >
+          <thead className="thead-primary">
+            <tr>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>total</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            {cartItems.map((item) => (
+            <tr className="alert" role="alert" key={item.product}>
+              <td>
+                <label className="checkbox-wrap checkbox-primary">
+                  <input type="checkbox" />
+                  <span className="checkmark"></span>
+                </label>
+              </td>
+              <td>
+                <div className="img" style={{ backgroundImage: `url(${item.image}`}}></div>
+              </td>
+              <td>
+                <div className="email">
+                  <span>{item.name}</span>
+                  <span>{item.description}</span>
+                </div>
+              </td>
+          <td>KSH {item.price}</td>
+              <td className="quantity">
+                <div className="input-group">
+                   <input type="text" name="quantity" className="quantity form-control input-number" value={item.qty} min="1" max="100" />
+                </div>
+              </td>
+          <td>{item.price * item.qty}</td>
+              <td>
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close" >
+                  <span aria-hidden="true"><i className="fa fa-close"></i></span>
+                </button>
+              </td>
+            </tr>))}
+            </tbody>
+        </table>
       </div>
-      <div className="placeorder-action">
-        <ul>
-          <li>
-            <button className="button primary full-width" onClick={placeOrderHandler} >Place Order</button>
-          </li>
-          <li>
-            <h3>Order Summary</h3>
-          </li>
-          <li>
-            <div>Items</div>
-            <div>KSH{itemsPrice}</div>
-          </li>
-          <li>
-            <div>Delivery fee</div>
-            <div>KSH{shippingPrice}</div>
-          </li>
-          <li>
-            <div>Order Total</div>
-            <div>KSH{totalPrice}</div>
-          </li>
-        </ul>
-
-
-
-      </div>
-
     </div>
-  </div>
+      
+        <div className="row justify-content-end">
+        <div className="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate-visible">
+          <div className="cart-total mb-3">
+            <h3>Cart Totals</h3>
+            <p className="d-flex">
+              <span>Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)})</span>
+              <span>KSH {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
+            </p>
+            <p className="d-flex">
+              <span>Delivery</span>
+              <span>KSH 0.00</span>
+            </p>
+            <p className="d-flex">
+              <span>Discount</span>
+              <span>KSH 0</span>
+            </p>
+         
+            <p className="d-flex total-price">
+              <span>Total</span>
+              <span>KSH {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</span>
+            </p>
+          
+        <p ><button type="submit" className="btn btn-primary py-3 px-4" 
+        type="button"
+        
+        onClick={placeOrderHandler}
+        >Place Order</button></p>
+        </div>
+       </div>
+    </div>
+  </section>
 
 }
 

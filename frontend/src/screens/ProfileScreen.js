@@ -38,55 +38,69 @@ function ProfileScreen(props) {
     };
   }, [userInfo])
 
-  return <div className="profile">
-    <div className="profile-info">
-      <div className="form">
-        <form onSubmit={submitHandler} >
-          <ul className="form-container">
-            <li>
-              <h2>User Profile</h2>
-            </li>
-            <li>
-              {loading && <div>Loading...</div>}
-              {error && <div>{error}</div>}
-              {success && <div>Profile Saved Successfully.</div>}
-            </li>
-            <li>
-              <label htmlFor="name">
-                Name
-          </label>
-              <input value={name} type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
-              </input>
-            </li>
-            <li>
-              <label htmlFor="email">
-                Email
-          </label>
-              <input value={email} type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
-              </input>
-            </li>
-            <li>
-              <label htmlFor="password">Password</label>
-              <input value={password} type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
-              </input>
-            </li>
+  return <section className="ftco-section">
+   <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-xl-10 ftco-animate-visible">
+        <form action="#" className="billing-form" onSubmit={submitHandler}>
+          <h3 className="mb-4 billing-heading">Sign In</h3>
+          <div className="row align-items-end">
+           <div className="col-md-6">
+	                <div className="form-group">
+	                	<label for="firstname">Name</label>
+                    <input type="text" className="form-control" placeholder=""
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    
+                    />
+	                </div>
+	              </div>
+            
+           
+            
+            <div className="col-md-6">
+              <div className="form-group">
+                <label for="emailaddress">Email Address</label>
+                <input type="text" className="form-control" placeholder="" required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)} />
+              </div>
+            </div>
 
-            <li>
-              <button type="submit" className="button primary">Update</button>
-            </li>
-            <li>
-              <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
-            </li>
+            <div className="col-md-6">
+              <div className="form-group">
+                <label for="lastname">password</label>
+                <input type="password" className="form-control" placeholder="" required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} />
+              </div>
+            </div>
 
-          </ul>
+          
+            <div className="w-100"></div>
+            <div className="col-md-12">
+            <p><button type='submit' className="btn btn-primary py-3 px-4" onClick={submitHandler}>Update</button></p>
+            </div>
+          </div>
+          <p><button type='submit' className="btn btn-primary py-3 px-4" onClick={handleLogout}>Logout</button></p>
         </form>
-      </div>
+
+
+
+          
+        </div>
+      </div> 
     </div>
     <div className="profile-orders content-margined">
       {
         loadingOrders ? <div>Loading...</div> :
           errorOrders ? <div>{errorOrders} </div> :
-            <table className="table">
+          <div className="container">
+          <div className="row">
+            <div className="table-wrap" />
+               <table className="table" >
+               <thead className="thead-primary">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -107,10 +121,13 @@ function ProfileScreen(props) {
                   </td>
                 </tr>)}
               </tbody>
+              </thead>
             </table>
+            </div>
+            </div>
       }
     </div>
-  </div>
+  </section>
 }
 
 export default ProfileScreen;
