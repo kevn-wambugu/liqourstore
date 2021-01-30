@@ -43,7 +43,7 @@ function HomeScreen(props) {
             products.map(product =>
 							<div className="col-md-4 d-flex" key={product._id}>
 								<div className="product ftco-animate-visible">
-									<div className="img d-flex align-items-center justify-content-center" style={{ backgroundImage: `url(${product.image}`}}>
+									<div className="img d-flex align-items-center justify-content-center" loading='lazy' style={{ backgroundImage: `url(${product.image}`}}>
 										<div className="desc">
 											<p className="meta-prod d-flex">
 												<Link to={'/product/' + product._id} className="d-flex align-items-center justify-content-center"><span className="flaticon-shopping-bag"></span></Link>
