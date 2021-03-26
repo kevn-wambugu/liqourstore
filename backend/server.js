@@ -9,7 +9,7 @@ import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import config from './config';
 import more from './routes/more'
-import mpesaroute from './routes/mpesaroute'
+var forceSsl = require('force-ssl-heroku');
 
 dotenv.config();
 
@@ -25,6 +25,9 @@ mongoose
   .catch((err) => console.log(err.reason));
 
 const app = express();
+
+
+app.use(forceSsl);
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', req.headers.origin);
   res.header(
@@ -58,6 +61,7 @@ app.use((err, req, res, next) => {
   res.status(status);
   res.send({ message: err.message });
 });
+
 
 app.use(fileUpload());
 app.post('/upload', (req, res) => {
