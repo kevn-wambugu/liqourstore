@@ -9,7 +9,7 @@ import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import config from './config';
 import more from './routes/more'
-var forceSsl = require('force-ssl-heroku');
+
 
 dotenv.config();
 
@@ -27,7 +27,7 @@ mongoose
 const app = express();
 
 
-app.use(forceSsl);
+
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', req.headers.origin);
   res.header(
