@@ -24,7 +24,7 @@ import { getErrorMessage } from '../util';
 const listProductCategories = () => async (dispatch) => {
   dispatch({ type: PRODUCT_CATEGORY_LIST_REQUEST, loading: true });
   try {
-    const result = await axios.get('/api/products/categories');
+    const result = await axios.get('/api/products/categories'); 
     dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: result.data });
   } catch (error) {
     dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: getErrorMessage(error) });

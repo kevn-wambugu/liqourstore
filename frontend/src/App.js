@@ -122,7 +122,7 @@ function App() {
     </div>
     <section className="ftco-section">
         
-           <Route path="/about" component={AboutScreen} />
+            <Route path="/about" component={AboutScreen} />
             <Route path="/contact" component={ContactScreen} />
             <Route path="/orders" component={OrdersScreen} />
             <Route path="/profile" component={ProfileScreen} />
